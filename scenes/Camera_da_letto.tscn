@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bruxgb8o21e67"]
+[gd_scene load_steps=15 format=4 uid="uid://bruxgb8o21e67"]
 
 [ext_resource type="PackedScene" uid="uid://chgpf1xugqy5k" path="res://scenes/Stanza.tscn" id="1_ctuuv"]
 [ext_resource type="Texture2D" uid="uid://dld2bncuq3dkx" path="res://assets/assets/Pixel Lands Interiors Demo/interiors_demo.png" id="2_oitdy"]
@@ -683,6 +683,16 @@ texture = ExtResource("2_oitdy")
 [sub_resource type="TileSet" id="TileSet_dw6d7"]
 sources/0 = SubResource("TileSetAtlasSource_jbnc1")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8ygr"]
+size = Vector2(5.75, 166.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2quvd"]
+size = Vector2(32, 58)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vpbwr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l6xap"]
+
 [node name="Node2D" instance=ExtResource("1_ctuuv")]
 
 [node name="Tappeto" type="TileMapLayer" parent="TileMapLayer" index="0"]
@@ -710,3 +720,26 @@ tile_set = SubResource("TileSet_dw6d7")
 [node name="TileMapLayer2" parent="." index="1"]
 light_mask = 2
 visibility_layer = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(-67, 12)
+shape = SubResource("RectangleShape2D_k8ygr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+position = Vector2(195.125, 11.625)
+shape = SubResource("RectangleShape2D_k8ygr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+position = Vector2(-48, 66)
+shape = SubResource("RectangleShape2D_2quvd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+position = Vector2(77, 91)
+shape = SubResource("WorldBoundaryShape2D_vpbwr")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="4"]
+position = Vector2(75, -66)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_l6xap")
