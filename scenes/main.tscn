@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://dcg0725p2tc8o"]
+[gd_scene load_steps=2 format=3 uid="uid://dcg0725p2tc8o"]
+
+[ext_resource type="PackedScene" uid="uid://bruxgb8o21e67" path="res://scenes/Camera_da_letto.tscn" id="1_kb2wm"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_kb2wm")]
+position = Vector2(341, 286)
+scale = Vector2(3.62473, 3.62473)
