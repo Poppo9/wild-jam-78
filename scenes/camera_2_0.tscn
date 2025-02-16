@@ -1,0 +1,149 @@
+[gd_scene load_steps=10 format=4 uid="uid://r4c4rbiohf27"]
+
+[ext_resource type="Texture2D" uid="uid://dld2bncuq3dkx" path="res://assets/assets/Pixel Lands Interiors Demo/interiors_demo.png" id="2_itbkp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj7te"]
+size = Vector2(45.668, 31.6347)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upxre"]
+size = Vector2(10.5239, 278.347)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxlk3"]
+size = Vector2(243.829, 11.4021)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4k0e"]
+size = Vector2(59.5033, 42.452)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3hua"]
+size = Vector2(24.5093, 31.7406)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cmrh"]
+size = Vector2(0.696778, 6.61292)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7x4vk"]
+texture = ExtResource("2_itbkp")
+7:2/0 = 0
+14:2/size_in_atlas = Vector2i(2, 4)
+14:2/0 = 0
+0:8/size_in_atlas = Vector2i(3, 2)
+0:8/0 = 0
+10:8/size_in_atlas = Vector2i(2, 3)
+10:8/0 = 0
+5:5/0 = 0
+5:5/0/z_index = -1
+6:5/0 = 0
+6:5/0/z_index = -1
+7:5/0 = 0
+7:5/0/z_index = -1
+7:6/0 = 0
+7:6/0/z_index = -1
+6:6/0 = 0
+6:6/0/z_index = -1
+5:6/0 = 0
+5:6/0/z_index = -1
+5:6/0/y_sort_origin = -1
+5:7/0 = 0
+5:7/0/z_index = -1
+6:7/0 = 0
+6:7/0/z_index = -1
+7:7/0 = 0
+7:7/0/z_index = -1
+9:6/size_in_atlas = Vector2i(1, 2)
+9:6/0 = 0
+10:6/size_in_atlas = Vector2i(1, 2)
+10:6/0 = 0
+11:6/size_in_atlas = Vector2i(1, 2)
+11:6/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+2:5/0 = 0
+8:6/size_in_atlas = Vector2i(1, 2)
+8:6/0 = 0
+8:6/0/y_sort_origin = -5
+12:8/size_in_atlas = Vector2i(3, 3)
+12:8/0 = 0
+6:10/0 = 0
+6:10/0/z_index = 1
+7:10/0 = 0
+9:2/size_in_atlas = Vector2i(1, 2)
+9:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_r7ojp"]
+sources/1 = SubResource("TileSetAtlasSource_7x4vk")
+
+[node name="Camera2_0" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(342, 287)
+scale = Vector2(4.88633, 4.88633)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(111.515, 0.797703)
+scale = Vector2(0.7, 0.7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_mj7te")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-210.031, 17.133)
+scale = Vector2(0.916761, 0.507317)
+shape = SubResource("RectangleShape2D_upxre")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(28.9735, 18.1562)
+scale = Vector2(0.916761, 0.507317)
+shape = SubResource("RectangleShape2D_upxre")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-88.8478, 86.7148)
+shape = SubResource("RectangleShape2D_kxlk3")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-88.8478, -52.0103)
+shape = SubResource("RectangleShape2D_kxlk3")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-159.224, -49.5551)
+scale = Vector2(1.09782, 1.05654)
+shape = SubResource("RectangleShape2D_q4k0e")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-183.426, 55.0896)
+scale = Vector2(1.13321, -1.62717)
+shape = SubResource("RectangleShape2D_y3hua")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-159.775, 37.5238)
+scale = Vector2(17.2872, -2.36565)
+shape = SubResource("RectangleShape2D_6cmrh")
+
+[node name="Letto" type="TileMapLayer" parent="."]
+z_index = -1
+y_sort_enabled = true
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAD+/wMAAQAOAAIAAAA=")
+tile_set = SubResource("TileSet_r7ojp")
+
+[node name="Sedia" type="TileMapLayer" parent="."]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(16.7815, 6.13957)
+scale = Vector2(0.7, 0.7)
+tile_map_data = PackedByteArray("AAAIAP//AQAMAAgAAAAIAP7/AQAIAAYAAAD9//z/AQAKAAgAAAD///z/AQAKAAgAAAABAP//AQAFAAUAAAACAP//AQAGAAUAAAADAP//AQAGAAUAAAAEAP//AQAHAAUAAAACAAAAAQAGAAYAAAACAAEAAQAGAAYAAAADAAAAAQAGAAYAAAADAAEAAQAGAAYAAAAEAAAAAQAHAAYAAAAEAAEAAQAHAAYAAAABAAAAAQAFAAYAAAABAAEAAQAFAAYAAAABAAIAAQAFAAcAAAACAAIAAQAGAAcAAAADAAIAAQAGAAcAAAAEAAIAAQAHAAcAAAD+/wEAAQAJAAIAAAA=")
+tile_set = SubResource("TileSet_r7ojp")
+
+[node name="Pavimento" type="TileMapLayer" parent="."]
+z_index = -2
+tile_map_data = PackedByteArray("AAD9//3/AQAAAAUAAAD+//3/AQABAAUAAAD+//7/AQAHAAIAAAACAAAAAQAHAAIAAAAFAAEAAQAHAAIAAAAGAAIAAQAHAAIAAAAHAAIAAQAHAAIAAAAHAAMAAQAHAAIAAAAGAAMAAQAHAAIAAAAFAAMAAQAHAAIAAAAEAAMAAQAHAAIAAAADAAMAAQAHAAIAAAACAAMAAQAHAAIAAAACAAIAAQAHAAIAAAABAAIAAQAHAAIAAAAAAAIAAQAHAAIAAAD//wIAAQAHAAIAAAD//wEAAQAHAAIAAAD+/wEAAQAHAAIAAAD+/wIAAQAHAAIAAAD9/wIAAQAAAAYAAAD9/wEAAQAAAAYAAAD9/wAAAQAAAAYAAAD9////AQAAAAYAAAD9//7/AQAAAAYAAAD///3/AQABAAUAAAAAAP3/AQABAAUAAAABAP3/AQABAAUAAAACAP3/AQABAAUAAAADAP3/AQABAAUAAAAEAP3/AQABAAUAAAAFAP3/AQABAAUAAAAGAP3/AQABAAUAAAAHAP3/AQABAAUAAAAHAP7/AQAHAAIAAAAIAP7/AQACAAYAAAAGAP7/AQAHAAIAAAAFAP7/AQAHAAIAAAAEAP7/AQAHAAIAAAADAP7/AQAHAAIAAAACAP7/AQAHAAIAAAABAP7/AQAHAAIAAAAIAP3/AQACAAUAAAAHAP//AQAHAAIAAAAIAP//AQACAAYAAAAIAAAAAQACAAYAAAAIAAEAAQACAAYAAAAIAAIAAQACAAYAAAAHAAEAAQAHAAIAAAAHAAAAAQAHAAIAAAAGAAEAAQAHAAIAAAAGAAAAAQAHAAIAAAAGAP//AQAHAAIAAAAFAP//AQAHAAIAAAAEAP//AQAHAAIAAAADAP//AQAHAAIAAAD/////AQAHAAIAAAD+////AQAHAAIAAAD+/wAAAQAHAAIAAAD//wAAAQAHAAIAAAAAAAAAAQAHAAIAAAAAAAEAAQAHAAIAAAABAAAAAQAHAAIAAAABAAEAAQAHAAIAAAACAAEAAQAHAAIAAAADAAEAAQAHAAIAAAAEAAEAAQAHAAIAAAADAAIAAQAHAAIAAAAEAAIAAQAHAAIAAAAFAAIAAQAHAAIAAAABAAMAAQAHAAIAAAAAAAMAAQAHAAIAAAD//wMAAQAHAAIAAAD+/wMAAQAHAAIAAAD///7/AQAHAAIAAAAAAP7/AQAHAAIAAAAAAP//AQAHAAIAAAABAP//AQAHAAIAAAACAP//AQAHAAIAAAADAAAAAQAHAAIAAAAEAAAAAQAHAAIAAAAFAAAAAQAHAAIAAAD9/wMAAQAAAAcAAAAIAAMAAQACAAcAAAA=")
+tile_set = SubResource("TileSet_r7ojp")
+
+[node name="Pavimento2" type="TileMapLayer" parent="."]
+z_index = -1
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD+/wMAAQABAAcAAAD//wMAAQABAAcAAAAAAAMAAQABAAcAAAABAAMAAQABAAcAAAACAAMAAQABAAcAAAADAAMAAQABAAcAAAAEAAMAAQABAAcAAAAFAAMAAQABAAcAAAAGAAMAAQABAAcAAAAHAAMAAQABAAcAAAA=")
+tile_set = SubResource("TileSet_r7ojp")

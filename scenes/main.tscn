@@ -5,9 +5,10 @@
 
 [node name="Main" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource("1_kb2wm")]
-position = Vector2(348, 281)
-scale = Vector2(3.49703, 3.49703)
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_0ioje")]
-position = Vector2(853, 240)
+y_sort_enabled = true
+position = Vector2(851, 241)
+
+[node name="Node2D" parent="." instance=ExtResource("1_kb2wm")]
+position = Vector2(347, 282)
+scale = Vector2(3.49703, 3.49703)

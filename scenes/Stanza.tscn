@@ -89,7 +89,6 @@ texture = ExtResource("1_x2cwg")
 6:5/0 = 0
 7:5/0 = 0
 11:5/0 = 0
-12:5/0 = 0
 13:5/0 = 0
 14:5/0 = 0
 15:5/0 = 0
@@ -168,6 +167,18 @@ texture = ExtResource("1_x2cwg")
 13:10/0 = 0
 14:10/0 = 0
 15:10/0 = 0
+0:10/0 = 0
+1:6/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+4:3/0 = 0
+4:4/0 = 0
+5:10/0 = 0
+8:2/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:4/0 = 0
+10:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qkx6h"]
 sources/0 = SubResource("TileSetAtlasSource_ef1ge")
