@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcg0725p2tc8o"]
+[gd_scene load_steps=2 format=3 uid="uid://dcg0725p2tc8o"]
 
-[ext_resource type="PackedScene" uid="uid://bruxgb8o21e67" path="res://scenes/Camera_da_letto.tscn" id="1_kb2wm"]
-[ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="2_0ioje"]
+[ext_resource type="PackedScene" uid="uid://bl278xrlur8ww" path="res://scenes/stanza_gatto.tscn" id="2_5fi41"]
 
 [node name="Main" type="Node2D"]
 
+<<<<<<< HEAD
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_0ioje")]
 y_sort_enabled = true
 position = Vector2(851, 241)
@@ -12,3 +12,8 @@ position = Vector2(851, 241)
 [node name="Node2D" parent="." instance=ExtResource("1_kb2wm")]
 position = Vector2(347, 282)
 scale = Vector2(3.49703, 3.49703)
+=======
+[node name="stanza" parent="." instance=ExtResource("2_5fi41")]
+position = Vector2(593, 319)
+scale = Vector2(3.50074, 3.50074)
+>>>>>>> 94ffd1a469a9441247989ceee9fa149b10d7c4b0
