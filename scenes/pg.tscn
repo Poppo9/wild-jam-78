@@ -207,6 +207,7 @@ position = Vector2(-2.36138e-07, 7.55207)
 shape = SubResource("RectangleShape2D_bgham")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 position = Vector2(0, -4.70457)
 sprite_frames = SubResource("SpriteFrames_vawrq")
 animation = &"idle_w"

@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=4 uid="uid://bl278xrlur8ww"]
+
+[ext_resource type="Texture2D" uid="uid://cnjrl7qh86erk" path="res://assets/httpskayillustrations.itch.iopixel-living-room-assets/tilesheet_itchio.png" id="1_jwuv2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hk26m"]
+texture = ExtResource("1_jwuv2")
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+6:0/size_in_atlas = Vector2i(2, 2)
+6:0/0 = 0
+14:0/size_in_atlas = Vector2i(2, 2)
+14:0/0 = 0
+4:6/size_in_atlas = Vector2i(2, 2)
+4:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kydwl"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_hk26m")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aq4hp"]
+texture = ExtResource("1_jwuv2")
+texture_region_size = Vector2i(32, 32)
+2:2/0 = 0
+2:3/0 = 0
+2:6/size_in_atlas = Vector2i(2, 1)
+2:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mrrmi"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_aq4hp")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c57me"]
+size = Vector2(30, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4hrd"]
+size = Vector2(20, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wowuq"]
+size = Vector2(59, 11)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iirlk"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_weh1g"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g1aan"]
+distance = -66.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eijsq"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+
+[node name="room" type="TileMapLayer" parent="."]
+z_index = -1
+tile_map_data = PackedByteArray("AAD8/wAAAQAEAAAAAAD9/wAAAQAEAAAAAAD8//7/AQAOAAAAAAD8////AQAEAAAAAAD9//7/AQAOAAAAAAD9////AQAEAAAAAAD+//7/AQAOAAAAAAD+////AQAEAAAAAAD///7/AQAOAAAAAAD/////AQAEAAAAAAD+/wAAAQAEAAAAAAD//wAAAQAEAAAAAAAAAAAAAQAEAAAAAAABAAAAAQAEAAAAAAAAAP7/AQAOAAAAAAAAAP//AQAEAAAAAAABAP7/AQAOAAAAAAABAP//AQAEAAAAAAACAP7/AQAOAAAAAAACAP//AQAEAAAAAAADAP7/AQAOAAAAAAADAP//AQAEAAAAAAACAAAAAQAEAAAAAAADAAAAAQAEAAAAAAD8/wEAAQAEAAAAAAD9/wEAAQAEAAAAAAD+/wEAAQAEAAAAAAD//wEAAQAEAAAAAAAAAAEAAQAEAAAAAAABAAEAAQAEAAAAAAACAAEAAQAEAAAAAAADAAEAAQAEAAAAAAA=")
+tile_set = SubResource("TileSet_kydwl")
+
+[node name="poltrona" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD9////AAACAAIAAAA=")
+tile_set = SubResource("TileSet_mrrmi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="poltrona"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="poltrona/StaticBody2D"]
+position = Vector2(-80, -9)
+shape = SubResource("RectangleShape2D_c57me")
+
+[node name="tavolino" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD8////AAACAAMAAAA=")
+tile_set = SubResource("TileSet_mrrmi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tavolino"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tavolino/StaticBody2D"]
+position = Vector2(-112, -9)
+shape = SubResource("RectangleShape2D_g4hrd")
+
+[node name="tavolone" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -10)
+tile_map_data = PackedByteArray("AAD9/wEAAAACAAYAAAA=")
+tile_set = SubResource("TileSet_mrrmi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tavolone"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tavolone/StaticBody2D"]
+position = Vector2(-80.5, 52.5)
+shape = SubResource("RectangleShape2D_wowuq")
+
+[node name="Bounderies" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounderies"]
+position = Vector2(2, 65)
+shape = SubResource("WorldBoundaryShape2D_iirlk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bounderies"]
+position = Vector2(-129, 0)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_weh1g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Bounderies"]
+position = Vector2(-42, 30)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_g1aan")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Bounderies"]
+position = Vector2(129, -2)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_eijsq")
