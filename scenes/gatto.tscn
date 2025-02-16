@@ -1,0 +1,115 @@
+[gd_scene load_steps=16 format=3 uid="uid://ug0tpp3q76pc"]
+
+[ext_resource type="Texture2D" uid="uid://cs43kkikl5to0" path="res://assets/httpskayillustrations.itch.iopixel-living-room-assets/kbrown_sprites-Sheet.png" id="1_upycw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwx2t"]
+atlas = ExtResource("1_upycw")
+region = Rect2(672, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adhi4"]
+atlas = ExtResource("1_upycw")
+region = Rect2(704, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08ixl"]
+atlas = ExtResource("1_upycw")
+region = Rect2(736, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0kou"]
+atlas = ExtResource("1_upycw")
+region = Rect2(768, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b37xg"]
+atlas = ExtResource("1_upycw")
+region = Rect2(800, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey2ae"]
+atlas = ExtResource("1_upycw")
+region = Rect2(832, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge20t"]
+atlas = ExtResource("1_upycw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utm6q"]
+atlas = ExtResource("1_upycw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nromx"]
+atlas = ExtResource("1_upycw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gprct"]
+atlas = ExtResource("1_upycw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5p2x"]
+atlas = ExtResource("1_upycw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jywri"]
+atlas = ExtResource("1_upycw")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2locm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwx2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adhi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08ixl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0kou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b37xg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ey2ae")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge20t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utm6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nromx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gprct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5p2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jywri")
+}],
+"loop": true,
+"name": &"idle2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddtv8"]
+
+[node name="gatto" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_2locm")
+animation = &"idle2"
+autoplay = "idle2"
+frame_progress = 0.365552
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ddtv8")

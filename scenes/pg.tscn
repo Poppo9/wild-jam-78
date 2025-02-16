@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ou8otpjrrskn" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_anim_16x16.png" id="1_sarhp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgham"]
-size = Vector2(16.3422, 7.67588)
+size = Vector2(12.5042, 7.67588)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xpe5e"]
 atlas = ExtResource("1_sarhp")
@@ -203,12 +203,12 @@ motion_mode = 1
 script = ExtResource("1_reg2f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.36138e-07, 7.55207)
+position = Vector2(-0.309514, 7.55207)
 shape = SubResource("RectangleShape2D_bgham")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, -4.70457)
 sprite_frames = SubResource("SpriteFrames_vawrq")
-animation = &"idle_w"
+animation = &"idle_s"
 autoplay = "idle_s"
