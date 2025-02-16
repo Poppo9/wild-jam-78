@@ -1,0 +1,124 @@
+[gd_scene load_steps=17 format=4 uid="uid://bvsorv45s2grb"]
+
+[ext_resource type="Texture2D" uid="uid://bfi3ifcjw1h8v" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="1_ji3ws"]
+[ext_resource type="Texture2D" uid="uid://bs5gqk21e17wm" path="res://assets/assets/AxulArt´s_Basic-Top-down-interior_By_AxulArt/AxulArt´s_Basic-Top-down-interior_By_AxulArt.png" id="2_8knpb"]
+[ext_resource type="Texture2D" uid="uid://d3jfvswlkoo1x" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="3_4uxfh"]
+[ext_resource type="Texture2D" uid="uid://dggqqxjelystq" path="res://assets/assets/sierrassets furniture pack/furniture/furniture spritesheet.png" id="4_60h5n"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71yi6"]
+texture = ExtResource("1_ji3ws")
+5:2/0 = 0
+6:0/0 = 0
+9:1/0 = 0
+8:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ouysh"]
+sources/1 = SubResource("TileSetAtlasSource_71yi6")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4u3yr"]
+texture = ExtResource("2_8knpb")
+1:9/0 = 0
+4:1/size_in_atlas = Vector2i(1, 2)
+4:1/0 = 0
+3:1/size_in_atlas = Vector2i(1, 2)
+3:1/0 = 0
+1:8/0 = 0
+0:8/0 = 0
+6:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xndc6"]
+sources/8 = SubResource("TileSetAtlasSource_4u3yr")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdxat"]
+texture = ExtResource("2_8knpb")
+4:1/size_in_atlas = Vector2i(1, 2)
+4:1/0 = 0
+3:1/size_in_atlas = Vector2i(1, 2)
+3:1/0 = 0
+9:7/size_in_atlas = Vector2i(3, 3)
+9:7/0 = 0
+5:3/size_in_atlas = Vector2i(2, 3)
+5:3/0 = 0
+3:4/0 = 0
+3:4/0/z_index = -1
+3:5/0 = 0
+3:5/0/z_index = -1
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tsr6m"]
+texture = ExtResource("3_4uxfh")
+1:59/size_in_atlas = Vector2i(2, 2)
+1:59/0 = 0
+0:55/size_in_atlas = Vector2i(3, 2)
+0:55/0 = 0
+12:53/size_in_atlas = Vector2i(1, 3)
+12:53/0 = 0
+12:68/size_in_atlas = Vector2i(2, 3)
+12:68/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gnntu"]
+texture = ExtResource("4_60h5n")
+separation = Vector2i(1, 1)
+6:10/0 = 0
+7:10/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+8:11/size_in_atlas = Vector2i(2, 1)
+8:11/0 = 0
+30:1/size_in_atlas = Vector2i(1, 2)
+30:1/0 = 0
+7:8/0 = 0
+27:12/0 = 0
+22:5/size_in_atlas = Vector2i(2, 1)
+22:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gesew"]
+sources/1 = SubResource("TileSetAtlasSource_fdxat")
+sources/2 = SubResource("TileSetAtlasSource_tsr6m")
+sources/9 = SubResource("TileSetAtlasSource_gnntu")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rnmjy"]
+texture = ExtResource("4_60h5n")
+separation = Vector2i(1, 1)
+21:19/size_in_atlas = Vector2i(1, 2)
+21:19/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_np4am"]
+sources/0 = SubResource("TileSetAtlasSource_rnmjy")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pw24y"]
+texture = ExtResource("4_60h5n")
+separation = Vector2i(1, 1)
+0:10/0 = 0
+1:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gm1lw"]
+sources/0 = SubResource("TileSetAtlasSource_pw24y")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Muri" type="TileMapLayer" parent="."]
+scale = Vector2(1.06508, 1.10628)
+tile_set = SubResource("TileSet_ouysh")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = -2
+scale = Vector2(1.06508, 1.10628)
+tile_map_data = PackedByteArray("AAD9////CAABAAkAAAD9/wAACAABAAkAAAD9/wEACAABAAkAAAD9/wIACAABAAkAAAD+////CAABAAkAAAD+/wAACAABAAkAAAD+/wEACAABAAkAAAD+/wIACAABAAkAAAD/////CAABAAkAAAD//wAACAABAAkAAAD//wEACAABAAkAAAD//wIACAABAAkAAAAAAP//CAABAAkAAAAAAAAACAABAAkAAAAAAAEACAABAAkAAAAAAAIACAABAAkAAAABAP//CAABAAkAAAABAAAACAABAAkAAAABAAEACAABAAkAAAABAAIACAABAAkAAAACAP//CAABAAkAAAACAAAACAABAAkAAAACAAEACAABAAkAAAACAAIACAABAAkAAAADAP//CAABAAkAAAADAAAACAABAAkAAAADAAEACAABAAkAAAADAAIACAABAAkAAAAEAP//CAABAAkAAAAEAAAACAABAAkAAAAEAAEACAABAAkAAAAEAAIACAABAAkAAAAFAP//CAABAAkAAAAFAAAACAABAAkAAAAFAAEACAABAAkAAAAFAAIACAABAAkAAAD9//7/CAAAAAgAAAD+//7/CAAAAAgAAAD///7/CAAAAAgAAAAAAP7/CAAAAAgAAAABAP7/CAAAAAgAAAACAP7/CAAAAAgAAAADAP7/CAAAAAgAAAAEAP7/CAAAAAgAAAAFAP7/CAAAAAgAAAA=")
+tile_set = SubResource("TileSet_xndc6")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+position = Vector2(-1, 7)
+tile_map_data = PackedByteArray("AAAAAAAAAQAFAAMAAAABAAAAAQADAAQAAAD//wAAAQADAAUAAAAAAP7/CQAGAAoAAAABAP7/CQAHAAoAAAACAP7/CQAHAAgAAAADAP7/CQAHAAgAAAAFAP7/CQAWAAUAAAA=")
+tile_set = SubResource("TileSet_gesew")
+
+[node name="Frigorifero" type="TileMapLayer" parent="."]
+position = Vector2(0, 17)
+tile_map_data = PackedByteArray("AAD///3/AAAVABMAAAA=")
+tile_set = SubResource("TileSet_np4am")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="."]
+position = Vector2(13, -2)
+tile_map_data = PackedByteArray("AAAEAP7/AAAAAAoAAAA=")
+tile_set = SubResource("TileSet_gm1lw")
