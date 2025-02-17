@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://cv320qrmlirt5"]
 
-[ext_resource type="PackedScene" uid="uid://bl278xrlur8ww" path="res://scenes/stanza_gatto.tscn" id="1_k6jc3"]
+[ext_resource type="PackedScene" uid="uid://d2h4m3t7v5tsl" path="res://scenes/corridoio.tscn" id="1_msx0u"]
 
 [node name="main" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource("1_k6jc3")]
-position = Vector2(563, 341)
-scale = Vector2(3.94565, 3.94565)
+[node name="corridoio" parent="." instance=ExtResource("1_msx0u")]
+position = Vector2(452, 461)
