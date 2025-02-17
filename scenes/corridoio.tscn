@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=4 uid="uid://d2h4m3t7v5tsl"]
+[gd_scene load_steps=19 format=4 uid="uid://d2h4m3t7v5tsl"]
 
 [ext_resource type="Texture2D" uid="uid://dld2bncuq3dkx" path="res://assets/assets/Pixel Lands Interiors Demo/interiors_demo.png" id="1_qf0w4"]
 [ext_resource type="Texture2D" uid="uid://botobwsq3oubp" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="2_0r5qx"]
 [ext_resource type="Texture2D" uid="uid://bs5gqk21e17wm" path="res://assets/assets/AxulArt´s_Basic-Top-down-interior_By_AxulArt/AxulArt´s_Basic-Top-down-interior_By_AxulArt.png" id="2_1d5sb"]
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="4_xg782"]
+[ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="5_akv8w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ef1ge"]
 texture = ExtResource("1_qf0w4")
@@ -479,6 +480,7 @@ size = Vector2(9.40013, 20)
 size = Vector2(7.78523, 11.4408)
 
 [node name="corridoio" type="Node2D"]
+position = Vector2(463, 469)
 scale = Vector2(2.8723, 2.8723)
 
 [node name="pavimento" type="TileMapLayer" parent="."]
@@ -550,3 +552,7 @@ shape = SubResource("RectangleShape2D_segvh")
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_xg782")]
 position = Vector2(-121.157, -28.8967)
 scale = Vector2(1.30936, 1.30936)
+
+[node name="Sprite2D" parent="." instance=ExtResource("5_akv8w")]
+position = Vector2(-10.7927, -61.6231)
+scale = Vector2(-0.746031, 0.0602689)

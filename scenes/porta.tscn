@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6k5ub3ek50q2"]
+
+[ext_resource type="Script" path="res://scripts/porta.gd" id="1_khmuf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8mtf"]
+
+[node name="Sprite2D" type="Sprite2D"]
+script = ExtResource("1_khmuf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_c8mtf")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
