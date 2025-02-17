@@ -399,5 +399,5 @@ shape = SubResource("RectangleShape2D_bgham")
 y_sort_enabled = true
 position = Vector2(0, -4.70457)
 sprite_frames = SubResource("SpriteFrames_vawrq")
-animation = &"walk_w"
+animation = &"idle_s"
 autoplay = "idle_s"
