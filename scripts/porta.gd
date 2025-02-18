@@ -14,12 +14,9 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 
 	if get_tree().current_scene.name == "corridoio":
-		var lista_stanze = ["res://scenes/stanza_gatto.tscn",
-							"res://scenes/camera_2_0.tscn",
-							"res://scenes/bagno.tscn",
-		]
-		
-		get_tree().change_scene_to_file(lista_stanze[1])
+		Global.bob_position = body.position
+		print(Global.bob_position)
+		get_tree().change_scene_to_file(Global.lista_stanze[0])
 	else:
-		get_tree().change_scene_to_file("res://scenes/corridoio.tscn") # Replace with function body.
+		get_tree().change_scene_to_file("res://scenes/corridoio.tscn")
 		#scena_corrente = get_tree().get_current_scene()

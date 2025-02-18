@@ -1,9 +1,9 @@
 [gd_scene load_steps=19 format=4 uid="uid://d2h4m3t7v5tsl"]
 
+[ext_resource type="Script" path="res://scripts/corridoio.gd" id="1_jhyn5"]
 [ext_resource type="Texture2D" uid="uid://dld2bncuq3dkx" path="res://assets/assets/Pixel Lands Interiors Demo/interiors_demo.png" id="1_qf0w4"]
 [ext_resource type="Texture2D" uid="uid://botobwsq3oubp" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="2_0r5qx"]
 [ext_resource type="Texture2D" uid="uid://bs5gqk21e17wm" path="res://assets/assets/AxulArt´s_Basic-Top-down-interior_By_AxulArt/AxulArt´s_Basic-Top-down-interior_By_AxulArt.png" id="2_1d5sb"]
-[ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="4_xg782"]
 [ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="5_akv8w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ef1ge"]
@@ -482,6 +482,7 @@ size = Vector2(7.78523, 11.4408)
 [node name="corridoio" type="Node2D"]
 position = Vector2(463, 469)
 scale = Vector2(2.8723, 2.8723)
+script = ExtResource("1_jhyn5")
 
 [node name="pavimento" type="TileMapLayer" parent="."]
 z_index = -1
@@ -490,7 +491,7 @@ tile_set = SubResource("TileSet_qkx6h")
 
 [node name="tappeto" type="TileMapLayer" parent="."]
 z_index = -1
-tile_map_data = PackedByteArray("AAD3//7/AAAFAAUAAAD3////AAAFAAcAAAD4////AAAGAAcAAAD5////AAAGAAcAAAD6////AAAGAAcAAAD7////AAAGAAcAAAD8////AAAGAAcAAAD9////AAAGAAcAAAD+////AAAGAAcAAAD/////AAAGAAcAAAAAAP//AAAGAAcAAAABAP//AAAGAAcAAAACAP//AAAGAAcAAAADAP//AAAGAAcAAAAEAP//AAAGAAcAAAAFAP//AAAGAAcAAAAGAP//AAAGAAcAAAAHAP//AAAGAAcAAAAIAP//AAAGAAcAAAAJAP//AAAGAAcAAAAKAP//AAAGAAcAAAALAP//AAAGAAcAAAAMAP//AAAGAAcAAAANAP//AAAHAAcAAAANAP7/AAAHAAUAAAAMAP7/AAAGAAUAAAALAP7/AAAGAAUAAAAKAP7/AAAGAAUAAAAJAP7/AAAGAAUAAAAIAP7/AAAGAAUAAAAHAP7/AAAGAAUAAAAGAP7/AAAGAAUAAAAFAP7/AAAGAAUAAAAEAP7/AAAGAAUAAAADAP7/AAAGAAUAAAACAP7/AAAGAAUAAAABAP7/AAAGAAUAAAAAAP7/AAAGAAUAAAD///7/AAAGAAUAAAD+//7/AAAGAAUAAAD9//7/AAAGAAUAAAD8//7/AAAGAAUAAAD7//7/AAAGAAUAAAD6//7/AAAGAAUAAAD5//7/AAAGAAUAAAD4//7/AAAGAAUAAAA=")
+tile_map_data = PackedByteArray("AAD3//7/AAAGAAMAAGD3////AAAFAAMAAGD4////AAAFAAQAAGD6////AAAFAAcAAAD7////AAAGAAcAAAD8////AAAGAAcAAAD9////AAAGAAcAAAD+////AAAGAAcAAAD/////AAAGAAcAAAAAAP//AAAGAAcAAAABAP//AAAGAAcAAAACAP//AAAGAAcAAAADAP//AAAGAAcAAAAEAP//AAAGAAcAAAAFAP//AAAGAAcAAAAGAP//AAAGAAcAAAAHAP//AAAGAAcAAAAIAP//AAAGAAcAAAAJAP//AAAGAAcAAAAMAP//AAAFAAMAAGANAP//AAAFAAQAAGANAP7/AAAGAAQAAGAMAP7/AAAGAAMAAGAKAP7/AAAHAAUAAAAJAP7/AAAGAAUAAAAIAP7/AAAGAAUAAAAHAP7/AAAGAAUAAAAGAP7/AAAGAAUAAAAFAP7/AAAGAAUAAAAEAP7/AAAGAAUAAAADAP7/AAAGAAUAAAACAP7/AAAGAAUAAAABAP7/AAAGAAUAAAAAAP7/AAAGAAUAAAD///7/AAAGAAUAAAD+//7/AAAGAAUAAAD9//7/AAAGAAUAAAD8//7/AAAGAAUAAAD7//7/AAAGAAUAAAD6//7/AAAFAAUAAAD4//7/AAAGAAQAAGAKAP//AAAHAAcAAAA=")
 tile_set = SubResource("TileSet_qkx6h")
 
 [node name="Muri" type="StaticBody2D" parent="."]
@@ -549,10 +550,43 @@ shape = SubResource("RectangleShape2D_j6usi")
 position = Vector2(215.221, 8.85379)
 shape = SubResource("RectangleShape2D_segvh")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("4_xg782")]
-position = Vector2(-121.157, -28.8967)
-scale = Vector2(1.30936, 1.30936)
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Sprite2D" parent="." instance=ExtResource("5_akv8w")]
-position = Vector2(-10.7927, -61.6231)
-scale = Vector2(-0.746031, 0.0602689)
+[node name="portasx" parent="Control" instance=ExtResource("5_akv8w")]
+position = Vector2(-138.913, -16.015)
+rotation = -3.14159
+scale = Vector2(0.287437, 1.67773)
+
+[node name="portadx" parent="Control" instance=ExtResource("5_akv8w")]
+position = Vector2(219.336, -16.015)
+rotation = -3.14159
+scale = Vector2(0.287437, 1.67773)
+
+[node name="porta1" parent="Control" instance=ExtResource("5_akv8w")]
+position = Vector2(-106.187, -62.6675)
+rotation = -3.14159
+scale = Vector2(0.746031, -0.0602689)
+
+[node name="porta2" parent="Control" instance=ExtResource("5_akv8w")]
+position = Vector2(-58.8379, -62.3194)
+rotation = 3.14159
+scale = Vector2(0.746031, -0.0602689)
+
+[node name="porta3" parent="Control" instance=ExtResource("5_akv8w")]
+position = Vector2(-11.8372, -61.6231)
+rotation = 3.14159
+scale = Vector2(0.746031, -0.0602689)
+
+[node name="porta4" parent="Control" instance=ExtResource("5_akv8w")]
+position = Vector2(85.2975, -61.9712)
+rotation = 3.14159
+scale = Vector2(0.746031, -0.0602689)
+
+[node name="porta5" parent="Control" instance=ExtResource("5_akv8w")]
+position = Vector2(157.365, -62.3194)
+rotation = 3.14159
+scale = Vector2(0.746031, -0.0602689)

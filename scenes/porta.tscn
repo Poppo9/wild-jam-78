@@ -4,7 +4,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8mtf"]
 
-[node name="Sprite2D" type="Sprite2D"]
+[node name="porta" type="Sprite2D"]
 script = ExtResource("1_khmuf")
 
 [node name="Area2D" type="Area2D" parent="."]
