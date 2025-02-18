@@ -169,7 +169,6 @@ rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_eijsq")
 
 [node name="gatto" parent="." instance=ExtResource("2_w80sj")]
-y_sort_enabled = true
 position = Vector2(-113, 52)
 scale = Vector2(0.661031, 0.661031)
 
