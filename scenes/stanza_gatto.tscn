@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=4 uid="uid://bl278xrlur8ww"]
+[gd_scene load_steps=16 format=4 uid="uid://da7kv547k54ll"]
 
 [ext_resource type="Texture2D" uid="uid://cnjrl7qh86erk" path="res://assets/httpskayillustrations.itch.iopixel-living-room-assets/tilesheet_itchio.png" id="1_jwuv2"]
 [ext_resource type="PackedScene" uid="uid://ug0tpp3q76pc" path="res://scenes/gatto.tscn" id="2_w80sj"]
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="3_8mos8"]
-[ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="4_fiubi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hk26m"]
 texture = ExtResource("1_jwuv2")
@@ -15,12 +14,12 @@ texture = ExtResource("1_jwuv2")
 2:0/0 = 0
 6:0/size_in_atlas = Vector2i(2, 2)
 6:0/0 = 0
+14:0/size_in_atlas = Vector2i(2, 2)
+14:0/0 = 0
 4:6/size_in_atlas = Vector2i(2, 2)
 4:6/0 = 0
 12:0/size_in_atlas = Vector2i(2, 2)
 12:0/0 = 0
-14:0/size_in_atlas = Vector2i(2, 2)
-14:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_kydwl"]
 tile_size = Vector2i(32, 32)
@@ -65,21 +64,12 @@ distance = -66.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eijsq"]
 
-[node name="stanza_gatto" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(583, 385)
-scale = Vector2(3.53185, 3.53185)
 
 [node name="room" type="TileMapLayer" parent="."]
 z_index = -1
-tile_map_data = PackedByteArray("AAD8/wAAAQAEAAAAAAD9/wAAAQAEAAAAAAD8////AQAEAAAAAAD9////AQAEAAAAAAD+////AQAEAAAAAAD/////AQAEAAAAAAD+/wAAAQAEAAAAAAD//wAAAQAEAAAAAAAAAAAAAQAEAAAAAAABAAAAAQAEAAAAAAAAAP//AQAEAAAAAAABAP//AQAEAAAAAAACAP//AQAEAAAAAAADAP//AQAEAAAAAAACAAAAAQAEAAAAAAADAAAAAQAEAAAAAAD8/wEAAQAEAAAAAAD9/wEAAQAEAAAAAAD+/wEAAQAEAAAAAAD//wEAAQAEAAAAAAAAAAEAAQAEAAAAAAABAAEAAQAEAAAAAAACAAEAAQAEAAAAAAADAAEAAQAEAAAAAAA=")
-tile_set = SubResource("TileSet_kydwl")
-
-[node name="wall" type="TileMapLayer" parent="."]
-z_index = -1
-position = Vector2(0, 32)
-scale = Vector2(1, 2)
-tile_map_data = PackedByteArray("AAD8//7/AQAOAAAAAAD9//7/AQAOAAAAAAD+//7/AQAOAAAAAAD///7/AQAOAAAAAAAAAP7/AQAOAAAAAAABAP7/AQAOAAAAAAACAP7/AQAOAAAAAAADAP7/AQAOAAAAAAA=")
+tile_map_data = PackedByteArray("AAD8/wAAAQAEAAAAAAD9/wAAAQAEAAAAAAD8//7/AQAOAAAAAAD8////AQAEAAAAAAD9//7/AQAOAAAAAAD9////AQAEAAAAAAD+//7/AQAOAAAAAAD+////AQAEAAAAAAD///7/AQAOAAAAAAD/////AQAEAAAAAAD+/wAAAQAEAAAAAAD//wAAAQAEAAAAAAAAAAAAAQAEAAAAAAABAAAAAQAEAAAAAAAAAP7/AQAOAAAAAAAAAP//AQAEAAAAAAABAP7/AQAOAAAAAAABAP//AQAEAAAAAAACAP7/AQAOAAAAAAACAP//AQAEAAAAAAADAP7/AQAOAAAAAAADAP//AQAEAAAAAAACAAAAAQAEAAAAAAADAAAAAQAEAAAAAAD8/wEAAQAEAAAAAAD9/wEAAQAEAAAAAAD+/wEAAQAEAAAAAAD//wEAAQAEAAAAAAAAAAEAAQAEAAAAAAABAAEAAQAEAAAAAAACAAEAAQAEAAAAAAADAAEAAQAEAAAAAAA=")
 tile_set = SubResource("TileSet_kydwl")
 
 [node name="tappeto" type="TileMapLayer" parent="."]
@@ -175,6 +165,3 @@ scale = Vector2(0.661031, 0.661031)
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_8mos8")]
 position = Vector2(82, 7)
 scale = Vector2(1.71443, 1.71443)
-
-[node name="Sprite2D" parent="." instance=ExtResource("4_fiubi")]
-position = Vector2(112.123, 18.6871)
