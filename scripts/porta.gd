@@ -16,6 +16,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if get_tree().current_scene.name == "corridoio":
 		Global.bob_position = body.position
 		var rand_num = randi_range(0,2)
-		get_tree().call_deferred("change_scene_to_file",Global.lista_stanze[rand_num])
+		get_tree().call_deferred("change_scene_to_file",Global.lista_stanze[1])
 	else:
 		get_tree().call_deferred("change_scene_to_file","res://scenes/corridoio.tscn")

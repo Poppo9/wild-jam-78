@@ -2515,60 +2515,49 @@ scale = Vector2(1.93479, 1.93479)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="muri2"]
 position = Vector2(-4.45763, 74.8881)
-scale = Vector2(1, 1)
 shape = SubResource("WorldBoundaryShape2D_as0ct")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="muri2"]
 position = Vector2(-121.247, 58.5435)
 rotation = 1.5708
-scale = Vector2(1, 1)
 shape = SubResource("WorldBoundaryShape2D_as0ct")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="muri2"]
 position = Vector2(-2.08022, -58.5435)
 rotation = 3.14159
-scale = Vector2(1, 1)
 shape = SubResource("WorldBoundaryShape2D_as0ct")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="muri2"]
 position = Vector2(122.139, -14.8588)
 rotation = 4.71239
-scale = Vector2(1, 1)
 shape = SubResource("WorldBoundaryShape2D_as0ct")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="muri2"]
 position = Vector2(-106.782, 43.7367)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_m07if")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="muri2"]
 position = Vector2(-90.8836, -52.9491)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yq100")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="muri2"]
 position = Vector2(-112.629, -10.6983)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mbvlv")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="muri2"]
 position = Vector2(-24.3683, -54.6802)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_mbvlv")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="muri2"]
 position = Vector2(84.1525, -53.1423)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kgxc7")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="muri2"]
 position = Vector2(119.71, 1.38927)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ji6av")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="muri2"]
 position = Vector2(110.646, 49.4277)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gjv2f")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="muri2"]
