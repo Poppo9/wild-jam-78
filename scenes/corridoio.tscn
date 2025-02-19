@@ -556,13 +556,8 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="portasx" parent="Control" instance=ExtResource("5_akv8w")]
+[node name="porta0" parent="Control" instance=ExtResource("5_akv8w")]
 position = Vector2(-138.913, -16.015)
-rotation = -3.14159
-scale = Vector2(0.287437, 1.67773)
-
-[node name="portadx" parent="Control" instance=ExtResource("5_akv8w")]
-position = Vector2(219.336, -16.015)
 rotation = -3.14159
 scale = Vector2(0.287437, 1.67773)
 
@@ -590,3 +585,8 @@ scale = Vector2(0.746031, -0.0602689)
 position = Vector2(157.365, -62.3194)
 rotation = 3.14159
 scale = Vector2(0.746031, -0.0602689)
+
+[node name="porta6" parent="Control" instance=ExtResource("5_akv8w")]
+position = Vector2(219.336, -16.015)
+rotation = -3.14159
+scale = Vector2(0.287437, 1.67773)
