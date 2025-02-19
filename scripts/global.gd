@@ -1,6 +1,7 @@
 extends Node
 
 var giorno = 1
+var ora = 7
 
 var lista_stanze = ["res://scenes/stanza_gatto.tscn",
 "res://scenes/camera_2_0.tscn",

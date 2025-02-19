@@ -17,5 +17,16 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		Global.bob_position = body.position
 		var rand_num = randi_range(0,2)
 		get_tree().call_deferred("change_scene_to_file",Global.lista_stanze[1])
+		clock_tick(true)
 	else:
 		get_tree().call_deferred("change_scene_to_file","res://scenes/corridoio.tscn")
+
+func clock_tick(debug:bool):
+	if Global.ora >= 24:
+		Global.ora = 1
+		Global.giorno +=1
+	else:
+		Global.ora += 1
+	if debug:
+		print("Ora: " + str(Global.ora))
+		print("Giorno: " + str(Global.giorno))
