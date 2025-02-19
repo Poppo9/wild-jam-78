@@ -19,6 +19,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		get_tree().call_deferred("change_scene_to_file",Global.lista_stanze[rand_num])
 	else:
 		get_tree().call_deferred("change_scene_to_file","res://scenes/corridoio.tscn")
-		#scena_corrente = get_tree().get_current_scene()
-	
-	
