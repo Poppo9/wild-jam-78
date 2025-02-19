@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://r4c4rbiohf27"]
 
 [ext_resource type="Texture2D" uid="uid://dld2bncuq3dkx" path="res://assets/assets/Pixel Lands Interiors Demo/interiors_demo.png" id="2_itbkp"]
-[ext_resource type="PackedScene" path="res://scenes/porta.tscn" id="2_rut26"]
+[ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="2_rut26"]
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="3_iwc3k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mj7te"]
