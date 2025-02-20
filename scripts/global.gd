@@ -8,12 +8,12 @@ var vita = 10
 
 var lista_stanze = [
 	"res://scenes/camera_2_0.tscn",
-	"res://scenes/camera_2_0.tscn",
+	"res://scenes/camera_2_0.tscn", #to be studio
 	"res://scenes/stanza_gatto.tscn",
 	"res://scenes/bagno.tscn",
 	"res://scenes/cucina.tscn",
-	"res://scenes/camera_2_0.tscn",
-	"res://scenes/camera_2_0.tscn",
+	"res://scenes/cantina.tscn",
+	"res://scenes/camera_2_0.tscn", #to be esterno
 ]
 
 var quest = "feed the cat"

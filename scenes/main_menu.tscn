@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkokvykw1i5fk"]
+[gd_scene load_steps=4 format=3 uid="uid://dkokvykw1i5fk"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_4eydl"]
 [ext_resource type="Texture2D" uid="uid://bmqsgnqj3mtrh" path="res://assets/background.png" id="2_8vhoa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tp0hm"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 6
 
 [node name="main_menu" type="Node2D"]
 position = Vector2(548, 296)
@@ -11,19 +16,49 @@ script = ExtResource("1_4eydl")
 texture = ExtResource("2_8vhoa")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 200.0
-offset_top = 50.0
-offset_right = 300.0
-offset_bottom = 85.0
+offset_left = -500.0
+offset_top = 200.0
+offset_right = -400.0
+offset_bottom = 235.0
 scale = Vector2(3.41619, 3.41619)
+text = "                              "
+
+[node name="Label2" type="Label" parent="Button"]
+z_index = 1
+texture_filter = 2
+layout_mode = 1
+offset_left = 9.95261
+offset_top = 2.04907
+offset_right = 122.953
+offset_bottom = 44.0491
+scale = Vector2(0.703209, 0.703209)
 text = "New Game"
+label_settings = SubResource("LabelSettings_tp0hm")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button2" type="Button" parent="."]
+z_index = 1
 offset_left = 200.0
 offset_top = 200.0
 offset_right = 300.0
 offset_bottom = 235.0
 scale = Vector2(3.41619, 3.41619)
+text = "                      "
+
+[node name="Label3" type="Label" parent="Button2"]
+z_index = 1
+texture_filter = 2
+layout_mode = 1
+offset_left = -5.26907
+offset_top = 2.04906
+offset_right = 152.731
+offset_bottom = 44.0491
+scale = Vector2(0.703209, 0.703209)
 text = "Tutorial"
+label_settings = SubResource("LabelSettings_tp0hm")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
