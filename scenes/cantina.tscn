@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://t76fisoobk67"]
+
+[ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="1_byo1u"]
+
+[node name="Cantina" type="Node2D"]
+
+[node name="HUD" parent="." instance=ExtResource("1_byo1u")]

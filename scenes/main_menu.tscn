@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkokvykw1i5fk"]
+[gd_scene load_steps=4 format=3 uid="uid://dkokvykw1i5fk"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_4eydl"]
 [ext_resource type="Texture2D" uid="uid://bmqsgnqj3mtrh" path="res://assets/background.png" id="2_8vhoa"]
+[ext_resource type="AudioStream" uid="uid://bqija72kung25" path="res://assets/Village.mp3" id="3_xlliw"]
 
 [node name="main_menu" type="Node2D"]
 position = Vector2(548, 296)
@@ -25,5 +26,11 @@ offset_right = 300.0
 offset_bottom = 235.0
 scale = Vector2(3.41619, 3.41619)
 text = "Tutorial"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xlliw")
+volume_db = -20.048
+autoplay = true
+parameters/looping = false
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
