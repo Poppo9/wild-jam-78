@@ -20,12 +20,12 @@ var quest = "feed the cat"
 var quests = {
 	"eat something":[[6,7],[11,13],[18,19]], #2 volte al giorno
 	"drink some water":[0,24], #2 volte
-	"go to the bathroom":, #2 volte al giorno
-	"feed the cat":, #1 volta
-	"eat something":, #2 volte al giorno
-	"drink some water":, #2 volte
-	"go to sleep":, #1
-	"go to the bathroom": #2 volte al giorno
+	#"go to the bathroom":, #2 volte al giorno
+	#"feed the cat":, #1 volta
+	#"eat something":, #2 volte al giorno
+	#"drink some water":, #2 volte
+	#"go to sleep":, #1
+	#"go to the bathroom": #2 volte al giorno
 }
 var quest_bannate = []
 
