@@ -25,8 +25,16 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	else:
 		get_tree().call_deferred("change_scene_to_file","res://scenes/corridoio.tscn")
 		update_last_room(body.position.x)
+		clock_tick(true)
+
 
 func clock_tick(debug:bool):
+	if Global.minuto == 45:
+		Global.minuto -= 45
+	else:
+		Global.minuto += 15
+		return
+	
 	if Global.ora >= 24:
 		Global.ora -= 23
 		Global.giorno +=1

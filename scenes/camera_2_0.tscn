@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://r4c4rbiohf27"]
+[gd_scene load_steps=14 format=4 uid="uid://r4c4rbiohf27"]
 
+[ext_resource type="Script" path="res://scripts/camera_2_0.gd" id="1_xnyt0"]
 [ext_resource type="Texture2D" uid="uid://dld2bncuq3dkx" path="res://assets/assets/Pixel Lands Interiors Demo/interiors_demo.png" id="2_itbkp"]
 [ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="2_rut26"]
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="3_iwc3k"]
+[ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="4_s3wou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mj7te"]
 size = Vector2(46.1934, 30.4055)
@@ -103,8 +105,9 @@ sources/1 = SubResource("TileSetAtlasSource_7x4vk")
 
 [node name="Camera2_0" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(377, 334)
-scale = Vector2(4.39482, 4.39482)
+position = Vector2(399, 350)
+scale = Vector2(3.33007, 3.33007)
+script = ExtResource("1_xnyt0")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(111.515, 0.797703)
@@ -192,3 +195,5 @@ z_index = -1
 y_sort_enabled = true
 position = Vector2(98.2332, 35.6095)
 scale = Vector2(1.03338, 1.03338)
+
+[node name="HUD" parent="." instance=ExtResource("4_s3wou")]

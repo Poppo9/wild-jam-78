@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=4 uid="uid://d2h4m3t7v5tsl"]
+[gd_scene load_steps=20 format=4 uid="uid://d2h4m3t7v5tsl"]
 
 [ext_resource type="Script" path="res://scripts/corridoio.gd" id="1_jhyn5"]
 [ext_resource type="Texture2D" uid="uid://dld2bncuq3dkx" path="res://assets/assets/Pixel Lands Interiors Demo/interiors_demo.png" id="1_qf0w4"]
 [ext_resource type="Texture2D" uid="uid://botobwsq3oubp" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="2_0r5qx"]
 [ext_resource type="Texture2D" uid="uid://bs5gqk21e17wm" path="res://assets/assets/AxulArt´s_Basic-Top-down-interior_By_AxulArt/AxulArt´s_Basic-Top-down-interior_By_AxulArt.png" id="2_1d5sb"]
 [ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="5_akv8w"]
+[ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="6_wh332"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ef1ge"]
 texture = ExtResource("1_qf0w4")
@@ -590,3 +591,5 @@ scale = Vector2(0.746031, -0.0602689)
 position = Vector2(219.336, -16.015)
 rotation = -3.14159
 scale = Vector2(0.287437, 1.67773)
+
+[node name="HUD" parent="." instance=ExtResource("6_wh332")]

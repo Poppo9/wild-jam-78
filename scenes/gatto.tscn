@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://ug0tpp3q76pc"]
+[gd_scene load_steps=17 format=3 uid="uid://ug0tpp3q76pc"]
 
 [ext_resource type="Texture2D" uid="uid://cs43kkikl5to0" path="res://assets/httpskayillustrations.itch.iopixel-living-room-assets/kbrown_sprites-Sheet.png" id="1_upycw"]
+[ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="2_sam3s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwx2t"]
 atlas = ExtResource("1_upycw")
@@ -100,6 +101,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ddtv8"]
+size = Vector2(20, 32)
 
 [node name="gatto" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -110,7 +112,9 @@ position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_2locm")
 animation = &"idle2"
 autoplay = "idle2"
-frame_progress = 0.365552
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_ddtv8")
+
+[node name="HUD" parent="." instance=ExtResource("2_sam3s")]
