@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=4 uid="uid://bl278xrlur8ww"]
+[gd_scene load_steps=18 format=4 uid="uid://bl278xrlur8ww"]
 
 [ext_resource type="Texture2D" uid="uid://cnjrl7qh86erk" path="res://assets/httpskayillustrations.itch.iopixel-living-room-assets/tilesheet_itchio.png" id="1_jwuv2"]
 [ext_resource type="PackedScene" uid="uid://ug0tpp3q76pc" path="res://scenes/gatto.tscn" id="2_w80sj"]
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="3_8mos8"]
 [ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="4_fiubi"]
+[ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="5_v8w71"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hk26m"]
 texture = ExtResource("1_jwuv2")
@@ -67,8 +68,8 @@ distance = -66.0
 
 [node name="stanza_gatto" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(583, 385)
-scale = Vector2(3.53185, 3.53185)
+position = Vector2(588, 375)
+scale = Vector2(2.62282, 2.62282)
 
 [node name="room" type="TileMapLayer" parent="."]
 z_index = -1
@@ -169,12 +170,16 @@ rotation = 4.71239
 shape = SubResource("WorldBoundaryShape2D_eijsq")
 
 [node name="gatto" parent="." instance=ExtResource("2_w80sj")]
+z_index = -1
 position = Vector2(-113, 52)
 scale = Vector2(0.661031, 0.661031)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_8mos8")]
+y_sort_enabled = true
 position = Vector2(82, 7)
 scale = Vector2(1.71443, 1.71443)
 
 [node name="Sprite2D" parent="." instance=ExtResource("4_fiubi")]
 position = Vector2(112.123, 18.6871)
+
+[node name="HUD" parent="." instance=ExtResource("5_v8w71")]

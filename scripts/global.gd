@@ -8,11 +8,12 @@ var lista_stanze = [
 	"res://scenes/camera_2_0.tscn",
 	"res://scenes/stanza_gatto.tscn",
 	"res://scenes/bagno.tscn",
-	"res://scenes/camera_2_0.tscn",
+	"res://scenes/cucina.tscn",
 	"res://scenes/camera_2_0.tscn",
 	"res://scenes/camera_2_0.tscn",
 	"res://scenes/camera_2_0.tscn",
 ]
 
+var quest = "feed the cat"
 
-var bob_position = Vector2(-125,-15)
+var bob_position = Vector2(-125,-40)
