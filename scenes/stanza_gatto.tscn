@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=4 uid="uid://bl278xrlur8ww"]
+[gd_scene load_steps=19 format=4 uid="uid://bl278xrlur8ww"]
 
 [ext_resource type="Texture2D" uid="uid://cnjrl7qh86erk" path="res://assets/httpskayillustrations.itch.iopixel-living-room-assets/tilesheet_itchio.png" id="1_jwuv2"]
 [ext_resource type="PackedScene" uid="uid://ug0tpp3q76pc" path="res://scenes/gatto.tscn" id="2_w80sj"]
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="3_8mos8"]
 [ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="4_fiubi"]
 [ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="5_v8w71"]
+[ext_resource type="PackedScene" uid="uid://bj45604kpjnhl" path="res://scenes/quest.tscn" id="6_lklfj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hk26m"]
 texture = ExtResource("1_jwuv2")
@@ -183,3 +184,7 @@ scale = Vector2(1.71443, 1.71443)
 position = Vector2(112.123, 18.6871)
 
 [node name="HUD" parent="." instance=ExtResource("5_v8w71")]
+
+[node name="Quest" parent="." instance=ExtResource("6_lklfj")]
+position = Vector2(29.739, 13.7257)
+scale = Vector2(0.679734, 0.679734)

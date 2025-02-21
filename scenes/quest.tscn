@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bj45604kpjnhl"]
+
+[ext_resource type="Script" path="res://scripts/quest.gd" id="1_hmr5i"]
+[ext_resource type="Texture2D" uid="uid://yanao8q5x3d7" path="res://assets/exclamation_spritesheet_01.png" id="2_nmru4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gm50h"]
+radius = 29.0172
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jib0p"]
+atlas = ExtResource("2_nmru4")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jgsm"]
+atlas = ExtResource("2_nmru4")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3t78v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jib0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jgsm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Quest" type="Node2D"]
+script = ExtResource("1_hmr5i")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_gm50h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_3t78v")
+autoplay = "default"
+frame_progress = 0.572462
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
