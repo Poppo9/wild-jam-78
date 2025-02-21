@@ -1,8 +1,9 @@
-[gd_scene load_steps=54 format=3 uid="uid://bj28l6bx1ol1p"]
+[gd_scene load_steps=55 format=3 uid="uid://bj28l6bx1ol1p"]
 
 [ext_resource type="Script" path="res://scripts/pg.gd" id="1_reg2f"]
 [ext_resource type="Texture2D" uid="uid://ou8otpjrrskn" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_anim_16x16.png" id="1_sarhp"]
 [ext_resource type="Texture2D" uid="uid://bpfyfooo7seg7" path="res://assets/Modern tiles_Free/Characters_free/Bob_run_16x16.png" id="3_qqf7f"]
+[ext_resource type="AudioStream" uid="uid://dhfcvihqde8kn" path="res://audio/step.mp3" id="4_doi0h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgham"]
 size = Vector2(12.5042, 7.67588)
@@ -401,3 +402,9 @@ position = Vector2(0, -4.70457)
 sprite_frames = SubResource("SpriteFrames_vawrq")
 animation = &"idle_s"
 autoplay = "idle_s"
+
+[node name="steps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_doi0h")
+volume_db = -20.0
+pitch_scale = 0.7
+parameters/looping = true

@@ -5,7 +5,7 @@ extends Node
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	# Load and play your music
-	var music = load("res://assets/Village.mp3")
+	var music = load("res://audio/Village.mp3")
 	audio_player.stream = music
 	audio_player.stream.loop = true
 	audio_player.finished.connect(_on_audio_finished)

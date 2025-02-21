@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6k5ub3ek50q2"]
+[gd_scene load_steps=4 format=3 uid="uid://c6k5ub3ek50q2"]
 
 [ext_resource type="Script" path="res://scripts/porta.gd" id="1_khmuf"]
+[ext_resource type="AudioStream" uid="uid://cgpvvkbalqv21" path="res://audio/apriporta_cut.mp3" id="2_75kkd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8mtf"]
 
@@ -11,5 +12,18 @@ script = ExtResource("1_khmuf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_c8mtf")
+
+[node name="apri_porta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_75kkd")
+volume_db = -10.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 20
+z_as_relative = false
+offset_left = -6901.0
+offset_top = -4635.0
+offset_right = 7151.0
+offset_bottom = 4942.0
+color = Color(0, 0, 0, 0)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

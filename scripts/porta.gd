@@ -1,8 +1,13 @@
 extends Sprite2D
-
+@onready var apri_porta: AudioStreamPlayer = $apri_porta
+@onready var color_rect: ColorRect = $ColorRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# fade from black
+	color_rect.color = Color(0, 0, 0, 1)
+	var tween = create_tween()
+	tween.tween_property(color_rect, "color:a", 0, 0.1)
 	pass # Replace with function body.
 
 
@@ -12,20 +17,16 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	
 	# Entrare in una stanza
 	if get_tree().current_scene.name == "corridoio":
 		Global.bob_position = body.position
 		var rand_num = randi_range(0,2)
-		# TODO AGGIUNGERE LOGICHE CHE IN FUNZIONE DEL GIORNO RANDOMIZZA O MENO LA STANZA
 		update_last_room(body.position.x)
-		get_tree().call_deferred("change_scene_to_file",Global.lista_stanze[Global.last_room_entered])
-		clock_tick(true)
-	#tornare al corridoio
+		apri_porta.play()
+		fade_to_black()
 	else:
-		get_tree().call_deferred("change_scene_to_file","res://scenes/corridoio.tscn")
-		update_last_room(body.position.x)
-		clock_tick(true)
+		apri_porta.play()
+		fade_to_black()
 
 
 func clock_tick(debug:bool):
@@ -44,23 +45,17 @@ func clock_tick(debug:bool):
 		print("Ora: " + str(Global.ora))
 		print("Giorno: " + str(Global.giorno))
 
-func check_porta_entrata(x_body) -> int:
-	var n_porta = -1
-	if x_body < -130: #porta sx
-		n_porta = 0
-	elif x_body < -80: #fa schifo
-		n_porta = 1
-	elif x_body < -40: #fa schifo
-		n_porta = 2
-	elif x_body < 40: #fa schifo
-		n_porta = 3
-	elif x_body < 120: #fa schifo
-		n_porta = 4
-	elif x_body < 180: #fa schifo
-		n_porta = 5
+func fade_to_black():
+	var tween = create_tween()
+	tween.tween_property(color_rect, "color:a", 1.0, 0.2)
+	tween.tween_callback(change_scene)
+
+func change_scene():
+	if get_tree().current_scene.name == "corridoio":
+		get_tree().call_deferred("change_scene_to_file", Global.lista_stanze[Global.last_room_entered])
 	else:
-		n_porta = 6
-	return n_porta
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/corridoio.tscn")
+	clock_tick(true)
 
 func update_last_room(x_body):
 	if x_body < -130: #porta sx
@@ -77,6 +72,3 @@ func update_last_room(x_body):
 		Global.last_room_entered = 5
 	else:
 		Global.last_room_entered = 6
-
-func is_stessa_stanza() -> bool:
-	return false
