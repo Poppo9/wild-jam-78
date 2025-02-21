@@ -105,7 +105,7 @@ sources/1 = SubResource("TileSetAtlasSource_7x4vk")
 
 [node name="Camera2_0" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(399, 350)
+position = Vector2(415, 393)
 scale = Vector2(3.33007, 3.33007)
 script = ExtResource("1_xnyt0")
 

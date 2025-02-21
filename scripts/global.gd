@@ -13,7 +13,7 @@ var lista_stanze = [
 	"res://scenes/bagno.tscn",
 	"res://scenes/cucina.tscn",
 	"res://scenes/cantina.tscn",
-	"res://scenes/camera_2_0.tscn", #to be esterno
+	"res://scenes/esterno.tscn", #to be esterno
 ]
 
 var quest = "feed the cat"

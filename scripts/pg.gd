@@ -1,13 +1,17 @@
 extends CharacterBody2D
 
+@onready var parent_node: Node2D = $".."
 
-const SPEED = 300.0
+var SPEED = 300.0
 #const JUMP_VELOCITY = -400.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var step_sound: AudioStreamPlayer = $steps
 
 var last_direction = "s"
 var is_moving = false
+func _ready() -> void:
+	if parent_node.name == "Esterno":
+		SPEED = 150
 
 func _physics_process(delta: float) -> void:
 	# Funziona ma non mi piace

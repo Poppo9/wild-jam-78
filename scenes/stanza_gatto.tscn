@@ -69,7 +69,7 @@ distance = -66.0
 
 [node name="stanza_gatto" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(588, 375)
+position = Vector2(577, 439)
 scale = Vector2(2.62282, 2.62282)
 
 [node name="room" type="TileMapLayer" parent="."]
