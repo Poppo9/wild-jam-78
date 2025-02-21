@@ -20,15 +20,28 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	var lista_quest = Global.lista_quest_attive.duplicate() 
 	if body.name == "CharacterBody2D":
-		if parent_node.name in lista_quest: 
+		if parent_node.name in lista_quest:
+			if parent_node.name == "camera":
+				dormi()
+				return
+			elif parent_node.name in Global.quest_lunghe:
+				Global.ora += 6
+				if Global.ora > 24:
+					dormi()
+					return
 			quest.queue_free()
 			completa_quest(parent_node.name,lista_quest)
 	print(lista_quest)
 	Global.lista_quest_attive = lista_quest.duplicate()
 
+func dormi() -> void:
+	Global.giorno +=1
+	Global.ora = 7
+	Global.minuto = 0
+	Global.vita -= len(Global.lista_quest_attive)
+	Global.lista_quest_attive = Global.lista_quests.duplicate()
 
 func completa_quest(quest: String, lista_quest):
-	Global.vita -=1 #TODO
 	print("rimuovo "+ quest + " da " + array_to_string(lista_quest))
 	var index = lista_quest.find(quest) 
 	if quest in lista_quest:

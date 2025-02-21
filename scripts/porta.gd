@@ -37,8 +37,9 @@ func clock_tick(debug:bool):
 		return
 	
 	if Global.ora >= 24:
-		Global.ora -= 23
+		Global.ora == 7
 		Global.giorno +=1
+		Global.vita -= len(Global.lista_quest_attive)
 		Global.lista_quest_attive = Global.lista_quests.duplicate() #ogni giorno resetta quest
 	else:
 		Global.ora += 1

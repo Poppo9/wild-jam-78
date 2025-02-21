@@ -133,7 +133,7 @@ tile_set = SubResource("TileSet_0jcjh")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 scale = Vector2(2.94231, 2.94231)
-tile_map_data = PackedByteArray("AAADAAQAAAAKAAMAAAAKAAQAAAAMAAQAAAAIAAMAAAAKAAEAAAAIAAQAAAAKAAIAAAAJAAMAAAAGAAAAAAAEAAMAAAAGAAAAAAAEAAYAAAADAAQAAAA=")
+tile_map_data = PackedByteArray("AAADAAQAAAAKAAMAAAAKAAQAAAAKAAIAAAAIAAQAAAAMAAQAAAAJAAMAAAAGAAAAAAAEAAMAAAAGAAAAAAAEAAYAAAADAAQAAAAKAAMAAAAKAAEAAAA=")
 tile_set = SubResource("TileSet_0jcjh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -184,4 +184,4 @@ position = Vector2(305.198, 193.452)
 scale = Vector2(2.1663, 0.117267)
 
 [node name="Quest" parent="." instance=ExtResource("5_3yprs")]
-position = Vector2(489.039, 239.112)
+position = Vector2(460.802, 200.662)

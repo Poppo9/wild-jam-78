@@ -19,7 +19,7 @@ var lista_stanze = [
 const mapping_nomi = {
 	"camera": "go to sleep",
 	"studio": "read a book",
-	"stanza_gatto": "feed Muso",
+	"stanza_gatto": "feed the cat",
 	"bagno": "go to the bathroom",
 	"cucina": "eat something",
 	"cantina": "check on 'Bob'",
@@ -38,6 +38,12 @@ const lista_quests = [
 	"studio",
 	"bagno",
 	"camera"
+]
+
+const quest_lunghe = [
+	"bagno",
+	"cucina",
+	"studio"
 ]
 
 var lista_quest_attive = []

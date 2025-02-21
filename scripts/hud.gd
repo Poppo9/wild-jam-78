@@ -7,6 +7,9 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Global.vita <= 0:
+		get_tree().change_scene_to_file("res://scenes/tutorial.tscn")
+
 	$days.text = "Day: " + str(Global.giorno)
 	$hour.text = str(Global.ora).lpad(2,"0") + ":" + str(Global.minuto).lpad(2,"0")
 	$HP.text = str(Global.vita) + " HP"
