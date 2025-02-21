@@ -16,16 +16,28 @@ var lista_stanze = [
 	"res://scenes/esterno.tscn", #to be esterno
 ]
 
+const mapping_nomi = {
+	"camera": "go to sleep",
+	"studio": "read a book",
+	"stanza_gatto": "feed Muso",
+	"bagno": "go to the bathroom",
+	"cucina": "eat something",
+	"cantina": "check on 'Bob'",
+	"esterno": "touch some grass"
+}
+
 const lista_quests = [
 	"bagno",
 	"cucina",
-	"camera",
-	"studio",
 	"stanza_gatto",
-	"bagno",
+	"esterno",
 	"cucina",
+	"bagno",
 	"cantina",
-	"esterno"
+	"cucina",
+	"studio",
+	"bagno",
+	"camera"
 ]
 
 var lista_quest_attive = []

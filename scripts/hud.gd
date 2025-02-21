@@ -11,7 +11,8 @@ func _process(delta: float) -> void:
 	$hour.text = str(Global.ora).lpad(2,"0") + ":" + str(Global.minuto).lpad(2,"0")
 	$HP.text = str(Global.vita) + " HP"
 	if len(Global.lista_quest_attive) > 0:
-		$quest.text = "Quest: " + str(Global.lista_quest_attive[0])
+		var mia_quest = str(Global.lista_quest_attive[0])
+		$quest.text = "Quest: " + str(Global.mapping_nomi.get(mia_quest, "Nessuna quest"))
 	else:
 		$quest.text = "Quest: "
 
