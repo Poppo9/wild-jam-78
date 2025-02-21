@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://r8ysmagexqwf"]
+[gd_scene load_steps=29 format=4 uid="uid://r8ysmagexqwf"]
 
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="1_stq7o"]
 [ext_resource type="Texture2D" uid="uid://bfi3ifcjw1h8v" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_bexah"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dggqqxjelystq" path="res://assets/assets/sierrassets furniture pack/furniture/furniture spritesheet.png" id="5_u5liy"]
 [ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="7_3vyjl"]
 [ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="8_2wye1"]
+[ext_resource type="PackedScene" uid="uid://bj45604kpjnhl" path="res://scenes/quest.tscn" id="9_kffbs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71yi6"]
 texture = ExtResource("2_bexah")
@@ -138,7 +139,7 @@ size = Vector2(30, 24.3671)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s6lx0"]
 size = Vector2(45.6647, 9.25572)
 
-[node name="Node2D" type="Node2D"]
+[node name="cucina" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(475, 355)
 scale = Vector2(3.90667, 4.10625)
@@ -220,3 +221,7 @@ position = Vector2(95.4989, 17.1892)
 scale = Vector2(0.566233, 1.25802)
 
 [node name="HUD" parent="." instance=ExtResource("8_2wye1")]
+
+[node name="Quest" parent="." instance=ExtResource("9_kffbs")]
+position = Vector2(4.35153, -16.5601)
+scale = Vector2(0.467577, 0.467577)

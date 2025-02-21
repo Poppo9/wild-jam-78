@@ -186,5 +186,5 @@ position = Vector2(112.123, 18.6871)
 [node name="HUD" parent="." instance=ExtResource("5_v8w71")]
 
 [node name="Quest" parent="." instance=ExtResource("6_lklfj")]
-position = Vector2(29.739, 13.7257)
+position = Vector2(-88.0732, 42.7021)
 scale = Vector2(0.679734, 0.679734)

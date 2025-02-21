@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=4 uid="uid://cgiuqod6omslx"]
+[gd_scene load_steps=14 format=4 uid="uid://cgiuqod6omslx"]
 
 [ext_resource type="Texture2D" uid="uid://do02l8757wl7s" path="res://assets/MetroCIty/Tiles.png" id="1_sk37e"]
 [ext_resource type="Texture2D" uid="uid://dymbplo871dh6" path="res://assets/MetroCIty/Building.png" id="2_6h3hr"]
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="3_x5sa8"]
 [ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="4_rejdm"]
 [ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="5_qyafy"]
+[ext_resource type="PackedScene" uid="uid://bj45604kpjnhl" path="res://scenes/quest.tscn" id="6_b0ec8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_258t4"]
 texture = ExtResource("1_sk37e")
@@ -273,6 +274,7 @@ tile_set = SubResource("TileSet_suqhd")
 
 [node name="ombre2" type="TileMapLayer" parent="mappa"]
 modulate = Color(0, 0, 0, 0.329412)
+z_index = 1
 position = Vector2(-3, -1)
 tile_map_data = PackedByteArray("AAAvACAAAAAMAA4AAFAvAB8AAAALAA4AAFAvAB4AAAALAA4AAFAvAB0AAAALAA4AAFAvABwAAAALAA4AAFAvABsAAAALAA4AAFAvABoAAAALAA4AAFAvABkAAAALAA4AAFAvABgAAAALAA4AAFAvABcAAAALAA4AAFAvABYAAAALAA4AAFAvABUAAAALAA4AAFAvABQAAAALAA4AAFAvABMAAAALAA4AAFAvABIAAAALAA4AAFAvABEAAAALAA4AAFAvABAAAAALAA4AAFAvAA8AAAAOABAAAFA=")
 tile_set = SubResource("TileSet_suqhd")
@@ -345,3 +347,7 @@ scale = Vector2(0.998594, 0.998594)
 [node name="porta" parent="." instance=ExtResource("5_qyafy")]
 position = Vector2(551, 433)
 scale = Vector2(1.16, -0.08)
+
+[node name="Quest" parent="." instance=ExtResource("6_b0ec8")]
+position = Vector2(551.706, 505.186)
+scale = Vector2(0.36734, 0.36734)

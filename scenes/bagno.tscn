@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://urx7mhr6qrb4"]
+[gd_scene load_steps=25 format=4 uid="uid://urx7mhr6qrb4"]
 
 [ext_resource type="Texture2D" uid="uid://bfi3ifcjw1h8v" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="1_ut6nr"]
 [ext_resource type="Texture2D" uid="uid://id3g80mssimk" path="res://assets/assets/sierrassets furniture pack/furniture/furniture pack coloured outline.png" id="2_bg3uv"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="6_lk0r0"]
 [ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="7_qss35"]
 [ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="8_rbrwh"]
+[ext_resource type="PackedScene" uid="uid://bj45604kpjnhl" path="res://scenes/quest.tscn" id="9_gf1or"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ha7u"]
 texture = ExtResource("1_ut6nr")
@@ -2571,3 +2572,7 @@ position = Vector2(3.8147e-06, 55.2746)
 scale = Vector2(2.39752, 0.597326)
 
 [node name="HUD" parent="." instance=ExtResource("8_rbrwh")]
+
+[node name="Quest" parent="." instance=ExtResource("9_gf1or")]
+position = Vector2(-6.33007, -47.2646)
+scale = Vector2(0.780556, 0.780556)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://t76fisoobk67"]
+[gd_scene load_steps=11 format=4 uid="uid://t76fisoobk67"]
 
 [ext_resource type="Texture2D" uid="uid://ca2yelymq7p1d" path="res://assets/CosmicLilac_Tiles.png" id="1_av46g"]
 [ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="1_byo1u"]
 [ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="3_l4na5"]
 [ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="4_pkhc8"]
+[ext_resource type="PackedScene" uid="uid://bj45604kpjnhl" path="res://scenes/quest.tscn" id="5_3yprs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rejnr"]
 texture = ExtResource("1_av46g")
@@ -122,7 +123,7 @@ size = Vector2(38.1497, 34.8454)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vha0"]
 
-[node name="Cantina" type="Node2D"]
+[node name="cantina" type="Node2D"]
 scale = Vector2(1.66449, 1.66449)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -181,3 +182,6 @@ scale = Vector2(1.84388, 1.84388)
 [node name="porta" parent="." instance=ExtResource("4_pkhc8")]
 position = Vector2(305.198, 193.452)
 scale = Vector2(2.1663, 0.117267)
+
+[node name="Quest" parent="." instance=ExtResource("5_3yprs")]
+position = Vector2(489.039, 239.112)
