@@ -222,7 +222,7 @@ size = Vector2(110, 85)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_po4d6"]
 size = Vector2(41, 37.25)
 
-[node name="Esterno" type="Node2D"]
+[node name="esterno" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(-91, -97)
 scale = Vector2(1.22529, 1.22529)
@@ -349,5 +349,5 @@ position = Vector2(551, 433)
 scale = Vector2(1.16, -0.08)
 
 [node name="Quest" parent="." instance=ExtResource("6_b0ec8")]
-position = Vector2(551.706, 505.186)
-scale = Vector2(0.36734, 0.36734)
+position = Vector2(537.832, 523.958)
+scale = Vector2(0.954952, 0.954952)

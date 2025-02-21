@@ -10,7 +10,7 @@ var SPEED = 300.0
 var last_direction = "s"
 var is_moving = false
 func _ready() -> void:
-	if parent_node.name == "Esterno":
+	if parent_node.name == "esterno":
 		SPEED = 150
 
 func _physics_process(delta: float) -> void:

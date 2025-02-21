@@ -39,6 +39,7 @@ func clock_tick(debug:bool):
 	if Global.ora >= 24:
 		Global.ora -= 23
 		Global.giorno +=1
+		Global.lista_quest_attive = Global.lista_quests.duplicate() #ogni giorno resetta quest
 	else:
 		Global.ora += 1
 	if debug:
@@ -51,11 +52,21 @@ func fade_to_black():
 	tween.tween_callback(change_scene)
 
 func change_scene():
+	# Calcola la probabilità di randomizzazione (aumenta con i giorni)
+	var prob_random = min(0.2 * Global.giorno, 0.8)  # 20% per giorno, max 80%
+	var is_random = randf() < prob_random
+	
 	if get_tree().current_scene.name == "corridoio":
-		get_tree().call_deferred("change_scene_to_file", Global.lista_stanze[Global.last_room_entered])
+		if is_random:
+			# Scelta casuale
+			get_tree().call_deferred("change_scene_to_file", Global.lista_stanze[int(randi_range(0,6))])
+		else:
+			# Scelta basata su last_room_entered
+			get_tree().call_deferred("change_scene_to_file", Global.lista_stanze[Global.last_room_entered])
 	else:
 		get_tree().call_deferred("change_scene_to_file", "res://scenes/corridoio.tscn")
 	clock_tick(true)
+	
 
 func update_last_room(x_body):
 	if x_body < -130: #porta sx

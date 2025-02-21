@@ -9,8 +9,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$days.text = "Day: " + str(Global.giorno)
 	$hour.text = str(Global.ora).lpad(2,"0") + ":" + str(Global.minuto).lpad(2,"0")
-	$quest.text = "Quest: " + str(Global.quest)
 	$HP.text = str(Global.vita) + " HP"
+	if len(Global.lista_quest_attive) > 0:
+		$quest.text = "Quest: " + str(Global.lista_quest_attive[0])
+	else:
+		$quest.text = "Quest: "
 
 func update_quest():
 	

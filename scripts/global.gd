@@ -8,7 +8,7 @@ var vita = 10
 
 var lista_stanze = [
 	"res://scenes/camera_2_0.tscn",
-	"res://scenes/camera_2_0.tscn", #to be studio
+	"res://scenes/studio.tscn", #to be studio
 	"res://scenes/stanza_gatto.tscn",
 	"res://scenes/bagno.tscn",
 	"res://scenes/cucina.tscn",
@@ -17,6 +17,8 @@ var lista_stanze = [
 ]
 
 const lista_quests = [
+	"bagno",
+	"cucina",
 	"camera",
 	"studio",
 	"stanza_gatto",
