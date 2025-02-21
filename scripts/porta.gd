@@ -1,6 +1,6 @@
 extends Sprite2D
 @onready var apri_porta: AudioStreamPlayer = $apri_porta
-@onready var color_rect: ColorRect = $ColorRect
+@onready var color_rect: ColorRect = $black_transition
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

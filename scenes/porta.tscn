@@ -17,7 +17,7 @@ shape = SubResource("RectangleShape2D_c8mtf")
 stream = ExtResource("2_75kkd")
 volume_db = -10.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="black_transition" type="ColorRect" parent="."]
 z_index = 20
 z_as_relative = false
 offset_left = -6901.0

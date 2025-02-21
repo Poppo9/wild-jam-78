@@ -51,3 +51,9 @@ offset_bottom = 62.0
 text = "HP"
 label_settings = SubResource("LabelSettings_ipvcx")
 vertical_alignment = 1
+
+[node name="background" type="ColorRect" parent="."]
+z_index = -30
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.128344, 0.128344, 0.128344, 1)
