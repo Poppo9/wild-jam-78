@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	var lista_quest = ["stanza_gatto","corridoio","cucina"] # TODO lista quest attive
+	var lista_quest = Global.lista_quest_attive 
 	if body.name == "CharacterBody2D":
 		if parent_node.name in lista_quest: 
 			quest.queue_free()
@@ -25,9 +25,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func completa_quest(quest: String, lista_quest):
 	Global.vita -=1 #TODO
 	print("rimuovo "+ quest + " da " + array_to_string(lista_quest))
-	var index = lista_quest.find(quest) 
-	if quest in lista_quest:
-		lista_quest.remove_at(index)
+	var index = Global.lista_quest_attive.find(quest) 
+	if quest in Global.lista_quest_attive:
+		Global.lista_quest_attive.remove_at(index)
 	
 func array_to_string(arr: Array) -> String:
 	var s = ""

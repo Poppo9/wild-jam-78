@@ -16,6 +16,18 @@ var lista_stanze = [
 	"res://scenes/esterno.tscn", #to be esterno
 ]
 
+const lista_quests = [
+	"camera",
+	"studio",
+	"stanza_gatto",
+	"bagno",
+	"cucina",
+	"cantina",
+	"esterno"
+]
+
+var lista_quest_attive = []
+
 var quest = "feed the cat"
 var quests = {
 	"eat something":[[6,7],[11,13],[18,19]], #2 volte al giorno

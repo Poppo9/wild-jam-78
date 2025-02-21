@@ -1,17 +1,17 @@
 [gd_scene load_steps=29 format=4 uid="uid://r8ysmagexqwf"]
 
-[ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="1_stq7o"]
-[ext_resource type="Texture2D" uid="uid://bfi3ifcjw1h8v" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="2_bexah"]
-[ext_resource type="Texture2D" uid="uid://bs5gqk21e17wm" path="res://assets/assets/AxulArt´s_Basic-Top-down-interior_By_AxulArt/AxulArt´s_Basic-Top-down-interior_By_AxulArt.png" id="3_b7svd"]
-[ext_resource type="Texture2D" uid="uid://d3jfvswlkoo1x" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="4_pocmq"]
-[ext_resource type="Texture2D" uid="uid://dld2bncuq3dkx" path="res://assets/assets/Pixel Lands Interiors Demo/interiors_demo.png" id="5_b5u37"]
-[ext_resource type="Texture2D" uid="uid://dggqqxjelystq" path="res://assets/assets/sierrassets furniture pack/furniture/furniture spritesheet.png" id="5_u5liy"]
-[ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="7_3vyjl"]
-[ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="8_2wye1"]
-[ext_resource type="PackedScene" uid="uid://bj45604kpjnhl" path="res://scenes/quest.tscn" id="9_kffbs"]
+[ext_resource type="Texture2D" uid="uid://bfi3ifcjw1h8v" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="1_48box"]
+[ext_resource type="Texture2D" uid="uid://bs5gqk21e17wm" path="res://assets/assets/AxulArt´s_Basic-Top-down-interior_By_AxulArt/AxulArt´s_Basic-Top-down-interior_By_AxulArt.png" id="2_dwbif"]
+[ext_resource type="Texture2D" uid="uid://d3jfvswlkoo1x" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="3_gxixg"]
+[ext_resource type="Texture2D" uid="uid://dggqqxjelystq" path="res://assets/assets/sierrassets furniture pack/furniture/furniture spritesheet.png" id="4_x82dn"]
+[ext_resource type="Texture2D" uid="uid://dld2bncuq3dkx" path="res://assets/assets/Pixel Lands Interiors Demo/interiors_demo.png" id="5_enp8j"]
+[ext_resource type="PackedScene" uid="uid://bj28l6bx1ol1p" path="res://scenes/pg.tscn" id="6_ktapa"]
+[ext_resource type="PackedScene" uid="uid://c6k5ub3ek50q2" path="res://scenes/porta.tscn" id="7_hc4x4"]
+[ext_resource type="PackedScene" uid="uid://d4cpuiwplvyh0" path="res://scenes/hud.tscn" id="8_dwun4"]
+[ext_resource type="PackedScene" uid="uid://bj45604kpjnhl" path="res://scenes/quest.tscn" id="9_x3v0k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71yi6"]
-texture = ExtResource("2_bexah")
+texture = ExtResource("1_48box")
 5:2/0 = 0
 6:0/0 = 0
 9:1/0 = 0
@@ -30,7 +30,7 @@ texture = ExtResource("2_bexah")
 sources/1 = SubResource("TileSetAtlasSource_71yi6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4u3yr"]
-texture = ExtResource("3_b7svd")
+texture = ExtResource("2_dwbif")
 1:9/0 = 0
 4:1/size_in_atlas = Vector2i(1, 2)
 4:1/0 = 0
@@ -44,7 +44,7 @@ texture = ExtResource("3_b7svd")
 sources/8 = SubResource("TileSetAtlasSource_4u3yr")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdxat"]
-texture = ExtResource("3_b7svd")
+texture = ExtResource("2_dwbif")
 4:1/size_in_atlas = Vector2i(1, 2)
 4:1/0 = 0
 3:1/size_in_atlas = Vector2i(1, 2)
@@ -60,7 +60,7 @@ texture = ExtResource("3_b7svd")
 3:5/0/y_sort_origin = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tsr6m"]
-texture = ExtResource("4_pocmq")
+texture = ExtResource("3_gxixg")
 1:59/size_in_atlas = Vector2i(2, 2)
 1:59/0 = 0
 0:55/size_in_atlas = Vector2i(3, 2)
@@ -71,7 +71,7 @@ texture = ExtResource("4_pocmq")
 12:68/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gnntu"]
-texture = ExtResource("5_u5liy")
+texture = ExtResource("4_x82dn")
 separation = Vector2i(1, 1)
 6:10/0 = 0
 6:10/0/y_sort_origin = -4
@@ -98,7 +98,7 @@ sources/2 = SubResource("TileSetAtlasSource_tsr6m")
 sources/9 = SubResource("TileSetAtlasSource_gnntu")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pw24y"]
-texture = ExtResource("5_u5liy")
+texture = ExtResource("4_x82dn")
 separation = Vector2i(1, 1)
 0:10/0 = 0
 0:10/0/y_sort_origin = 6
@@ -108,7 +108,7 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_pw24y")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rnmjy"]
-texture = ExtResource("5_u5liy")
+texture = ExtResource("4_x82dn")
 separation = Vector2i(1, 1)
 21:19/size_in_atlas = Vector2i(1, 2)
 21:19/0 = 0
@@ -117,7 +117,7 @@ separation = Vector2i(1, 1)
 sources/0 = SubResource("TileSetAtlasSource_rnmjy")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6xkhc"]
-texture = ExtResource("5_b5u37")
+texture = ExtResource("5_enp8j")
 5:3/size_in_atlas = Vector2i(2, 2)
 5:3/0 = 0
 
@@ -211,17 +211,17 @@ shape = SubResource("RectangleShape2D_xf0tu")
 position = Vector2(6.94897, 18.417)
 shape = SubResource("RectangleShape2D_s6lx0")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_stq7o")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_ktapa")]
 y_sort_enabled = true
 position = Vector2(77.6301, 9.8224)
 scale = Vector2(1.09485, 1.09485)
 
-[node name="porta" parent="." instance=ExtResource("7_3vyjl")]
+[node name="porta" parent="." instance=ExtResource("7_hc4x4")]
 position = Vector2(95.4989, 17.1892)
 scale = Vector2(0.566233, 1.25802)
 
-[node name="HUD" parent="." instance=ExtResource("8_2wye1")]
+[node name="HUD" parent="." instance=ExtResource("8_dwun4")]
 
-[node name="Quest" parent="." instance=ExtResource("9_kffbs")]
+[node name="Quest" parent="." instance=ExtResource("9_x3v0k")]
 position = Vector2(4.35153, -16.5601)
 scale = Vector2(0.467577, 0.467577)

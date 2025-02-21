@@ -104,7 +104,7 @@ texture = ExtResource("2_itbkp")
 [sub_resource type="TileSet" id="TileSet_r7ojp"]
 sources/1 = SubResource("TileSetAtlasSource_7x4vk")
 
-[node name="camera2_0" type="Node2D"]
+[node name="camera" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(415, 393)
 scale = Vector2(3.33007, 3.33007)
