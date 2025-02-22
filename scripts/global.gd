@@ -44,13 +44,13 @@ const lista_quests = [
 	"camera"
 ]
 const quest_lunghe = [
-	"bagno",
+	#"bagno",
 	"cucina",
-	#"stanza_gatto",
-	#"esterno",
-	#"cantina",
+	"stanza_gatto",
+	"esterno",
+	"cantina",
 	"studio",
-	#"camera"
+	"camera"
 ]
 #const quest_lunghe = [
 	#"bagno",
