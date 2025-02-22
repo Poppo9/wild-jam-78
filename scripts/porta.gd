@@ -59,7 +59,7 @@ func fade_to_black():
 
 func change_scene():
 	if (Global.ora != 7) and (Global.minuto !=0):
-		Global.record = str(Global.giorno) + ", hour " + str(Global.ora) + str(Global.minuto)
+		Global.record = str(Global.giorno) + ", hour " + str(Global.ora-1).lpad(2,"0") + str(Global.minuto).lpad(2,"0")
 	var prob_random = min(0.2 * (Global.giorno-1), 0.8)  # 20% per giorno, max 80%
 	var is_random = randf() < prob_random
 	var random_room = Global.lista_stanze[int(randi_range(0,6))]

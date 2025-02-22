@@ -11,7 +11,7 @@ func _process(_delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/killscreen.tscn")
 
 	$days.text = "Day: " + str(Global.giorno)
-	$hour.text = str(Global.ora).lpad(2,"0") + ":" + str(Global.minuto).lpad(2,"0")
+	$hour.text = str(Global.ora - 1).lpad(2,"0") + ":" + str(Global.minuto).lpad(2,"0")
 	$HP.text = str(Global.vita) + " HP"
 	if len(Global.lista_quest_attive) > 0:
 		var mia_quest = str(Global.lista_quest_attive[0])
