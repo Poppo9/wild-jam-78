@@ -1,11 +1,14 @@
 extends Node2D
 @onready var label: Label = $Label
+@onready var morte: AudioStreamPlayer = $morte
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	label.text = "\"...IT survived untill day " + str(Global.giorno) + ", hour " + str(Global.ora).lpad(2,"0") + ":" + str(Global.minuto).lpad(2,"0") + "...\""
-
+	morte.play()
+	while morte.playing:
+		pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

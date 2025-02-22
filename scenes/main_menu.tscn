@@ -9,7 +9,7 @@ font_color = Color(0, 0, 0, 1)
 outline_size = 6
 
 [sub_resource type="LabelSettings" id="LabelSettings_tp0hm"]
-font_size = 30
+font_size = 25
 font_color = Color(0, 0, 0, 1)
 outline_size = 6
 
@@ -45,9 +45,9 @@ text = "                              "
 z_index = 1
 texture_filter = 2
 layout_mode = 1
-offset_left = 9.95261
+offset_left = 20.4907
 offset_top = 2.04907
-offset_right = 122.953
+offset_right = 152.491
 offset_bottom = 44.0491
 scale = Vector2(0.703209, 0.703209)
 text = "New Game"

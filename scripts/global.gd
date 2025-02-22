@@ -1,7 +1,7 @@
 extends Node
 
 var giorno = 1
-var ora = 20
+var ora = 7
 var minuto = 0
 var last_room_entered = 0
 const max_life = 10

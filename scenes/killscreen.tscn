@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://312r5jdfabm5"]
+[gd_scene load_steps=6 format=3 uid="uid://312r5jdfabm5"]
 
 [ext_resource type="Script" path="res://scripts/killscreen.gd" id="1_ocw05"]
 [ext_resource type="Texture2D" uid="uid://cwoli2u7wlkug" path="res://assets/disegnopoppo.jpeg" id="2_fbilw"]
 [ext_resource type="FontFile" uid="uid://cx2qlqh1dj3k6" path="res://assets/HelpMe_Font_1_10/HelpMe.otf" id="3_obcc3"]
+[ext_resource type="AudioStream" uid="uid://b3gyg6ax2sepg" path="res://audio/morte.mp3" id="4_xeo8p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ss4x0"]
 font = ExtResource("3_obcc3")
@@ -56,5 +57,9 @@ offset_right = 1155.0
 offset_bottom = 626.0
 scale = Vector2(0.841528, 0.841528)
 text = "AGAIN"
+
+[node name="morte" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xeo8p")
+volume_db = -5.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var quest: Node2D = $"."
 @onready var parent_node: Node2D = $".."
+@onready var ding: AudioStreamPlayer = $ding
 
 func _ready() -> void:
 	if len(Global.lista_quest_attive) > 0:
@@ -22,14 +23,20 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		if parent_node.name in lista_quest:
 			if parent_node.name == "camera":
-				addormentati()
+				Global.lista_quest_attive = [] #svuota quest attive
+				addormentati()# TODO non dovrebbe subire danni ma il giorno aumenta
 				return
-			elif parent_node.name in Global.quest_lunghe:
+			else:
+			#elif parent_node.name in Global.quest_lunghe:
 				Global.ora += 1
+				ding.play()
+				#while ding.playing:
+					#pass
 				if Global.ora > 24:
 					addormentati()
 					return
-			quest.queue_free()
+			quest.get_node("Area2D/CollisionShape2D").queue_free()
+			quest.get_node("AnimatedSprite2D").queue_free()
 			completa_quest(parent_node.name,lista_quest)
 	print(lista_quest)
 	Global.lista_quest_attive = lista_quest.duplicate()
