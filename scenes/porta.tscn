@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6k5ub3ek50q2"]
+[gd_scene load_steps=6 format=3 uid="uid://c6k5ub3ek50q2"]
 
 [ext_resource type="Script" path="res://scripts/porta.gd" id="1_khmuf"]
 [ext_resource type="AudioStream" uid="uid://cgpvvkbalqv21" path="res://audio/apriporta_cut.mp3" id="2_75kkd"]
+[ext_resource type="AudioStream" uid="uid://dj5t7thups7o2" path="res://audio/damage.mp3" id="3_xdnbk"]
+[ext_resource type="AudioStream" uid="uid://bj6vv2u1kibgo" path="res://audio/shuffle.mp3" id="4_cfqk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8mtf"]
 
@@ -15,6 +17,14 @@ shape = SubResource("RectangleShape2D_c8mtf")
 
 [node name="apri_porta" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_75kkd")
+volume_db = -10.0
+
+[node name="damage_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xdnbk")
+volume_db = -10.0
+
+[node name="shuffle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cfqk1")
 volume_db = -10.0
 
 [node name="black_transition" type="ColorRect" parent="."]

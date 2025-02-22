@@ -1,6 +1,8 @@
 extends Sprite2D
 @onready var apri_porta: AudioStreamPlayer = $apri_porta
 @onready var color_rect: ColorRect = $black_transition
+@onready var damage_sound: AudioStreamPlayer = $damage_sound
+@onready var shuffle: AudioStreamPlayer = $shuffle
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -40,6 +42,10 @@ func clock_tick(debug:bool):
 		Global.ora = 7
 		Global.giorno += 1
 		Global.vita -= len(Global.lista_quest_attive)
+		if len(Global.lista_quest_attive)>0:
+			damage_sound.play()
+		while damage_sound.playing:
+			pass
 		Global.lista_quest_attive = Global.lista_quests.duplicate() #ogni giorno resetta quest
 	else:
 		Global.ora += 1
@@ -53,21 +59,24 @@ func fade_to_black():
 	tween.tween_callback(change_scene)
 
 func change_scene():
-	# Calcola la probabilità di randomizzazione (aumenta con i giorni)
 	var prob_random = min(0.2 * Global.giorno, 0.8)  # 20% per giorno, max 80%
 	var is_random = randf() < prob_random
+	var random_room = Global.lista_stanze[int(randi_range(0,6))]
 	
 	if get_tree().current_scene.name == "corridoio":
+		var expected_room = Global.lista_stanze[Global.last_room_entered]
 		if is_random:
-			# Scelta casuale
-			get_tree().call_deferred("change_scene_to_file", Global.lista_stanze[int(randi_range(0,6))])
+			if random_room != expected_room:
+				shuffle.play()
+				while shuffle.playing:
+					pass
+			get_tree().call_deferred("change_scene_to_file", random_room)
 		else:
-			# Scelta basata su last_room_entered
-			get_tree().call_deferred("change_scene_to_file", Global.lista_stanze[Global.last_room_entered])
+			get_tree().call_deferred("change_scene_to_file", expected_room)
 	else:
 		get_tree().call_deferred("change_scene_to_file", "res://scenes/corridoio.tscn")
 	clock_tick(true)
-	
+
 
 func update_last_room(x_body):
 	if x_body < -130: #porta sx

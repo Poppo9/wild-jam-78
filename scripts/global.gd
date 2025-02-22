@@ -1,7 +1,7 @@
 extends Node
 
 var giorno = 1
-var ora = 7
+var ora = 20
 var minuto = 0
 var last_room_entered = 0
 const max_life = 10
@@ -26,6 +26,8 @@ const mapping_nomi = {
 	"cantina": "check on 'Bob'",
 	"esterno": "check the mailbox"
 }
+
+var ordine_stanze = mapping_nomi.keys()
 
 const lista_quests = [
 	"bagno",
