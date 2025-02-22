@@ -7,8 +7,7 @@ extends Node2D
 func _ready() -> void:
 	label.text = "\"...IT survived untill " + Global.record +"...\""
 	morte.play()
-	while morte.playing:
-		pass
+	await morte.finished
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

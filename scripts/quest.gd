@@ -34,8 +34,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 				if parent_node.name in Global.quest_lunghe:
 					Global.ora += 1
 				ding.play()
-				#while ding.playing:
-					#pass
+				await ding.finished
 				if Global.ora > 24:
 					addormentati()
 					return
@@ -52,8 +51,7 @@ func addormentati() -> void:
 	Global.vita -= len(Global.lista_quest_attive)
 	if len(Global.lista_quest_attive) > 0:
 		damage_sound.play()
-		while damage_sound.playing:
-			pass
+		await damage_sound.finished
 	else:
 		ronf.play()
 		background.visible = true  

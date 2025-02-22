@@ -44,8 +44,7 @@ func clock_tick(debug:bool):
 		Global.vita -= len(Global.lista_quest_attive)
 		if len(Global.lista_quest_attive)>0:
 			damage_sound.play()
-		while damage_sound.playing:
-			pass
+			await damage_sound.finished
 		Global.lista_quest_attive = Global.lista_quests.duplicate() #ogni giorno resetta quest
 	else:
 		Global.ora += 1
@@ -70,8 +69,7 @@ func change_scene():
 		if is_random:
 			if random_room != expected_room:
 				shuffle.play()
-				while shuffle.playing:
-					pass
+				await shuffle.finished
 			get_tree().call_deferred("change_scene_to_file", random_room)
 		else:
 			get_tree().call_deferred("change_scene_to_file", expected_room)
