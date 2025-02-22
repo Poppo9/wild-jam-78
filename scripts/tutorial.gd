@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,8 +12,4 @@ func _process(_delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	Global.lista_quest_attive = Global.lista_quests
-	get_tree().change_scene_to_file("res://scenes/camera_2_0.tscn")
-
-func _on_button_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/tutorial.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

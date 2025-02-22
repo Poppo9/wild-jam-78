@@ -13,7 +13,7 @@ func _ready() -> void:
 		quest.queue_free()
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -22,29 +22,32 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		if parent_node.name in lista_quest:
 			if parent_node.name == "camera":
-				dormi()
+				addormentati()
 				return
 			elif parent_node.name in Global.quest_lunghe:
-				Global.ora += 6
+				Global.ora += 1
 				if Global.ora > 24:
-					dormi()
+					addormentati()
 					return
 			quest.queue_free()
 			completa_quest(parent_node.name,lista_quest)
 	print(lista_quest)
 	Global.lista_quest_attive = lista_quest.duplicate()
 
-func dormi() -> void:
+func addormentati() -> void:
 	Global.giorno +=1
 	Global.ora = 7
 	Global.minuto = 0
 	Global.vita -= len(Global.lista_quest_attive)
 	Global.lista_quest_attive = Global.lista_quests.duplicate()
+	quest.queue_free()
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/camera_2_0.tscn")
 
-func completa_quest(quest: String, lista_quest):
-	print("rimuovo "+ quest + " da " + array_to_string(lista_quest))
-	var index = lista_quest.find(quest) 
-	if quest in lista_quest:
+
+func completa_quest(input_quest: String, lista_quest):
+	print("rimuovo "+ input_quest + " da " + array_to_string(lista_quest))
+	var index = lista_quest.find(input_quest) 
+	if input_quest in lista_quest:
 		lista_quest.remove_at(index)
 	
 func array_to_string(arr: Array) -> String:

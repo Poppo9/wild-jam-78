@@ -24,7 +24,7 @@ const mapping_nomi = {
 	"bagno": "go to the bathroom",
 	"cucina": "eat something",
 	"cantina": "check on 'Bob'",
-	"esterno": "touch some grass"
+	"esterno": "check the mailbox"
 }
 
 const lista_quests = [
@@ -40,12 +40,24 @@ const lista_quests = [
 	"bagno",
 	"camera"
 ]
-
 const quest_lunghe = [
 	"bagno",
 	"cucina",
-	"studio"
+	"stanza_gatto",
+	"esterno",
+	"cucina",
+	"bagno",
+	"cantina",
+	"cucina",
+	"studio",
+	"bagno",
+	"camera"
 ]
+#const quest_lunghe = [
+	#"bagno",
+	#"cucina",
+	#"studio"
+#]
 
 var lista_quest_attive = []
 

@@ -6,7 +6,7 @@ func _ready() -> void:
 	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Global.vita <= 0:
 		get_tree().change_scene_to_file("res://scenes/killscreen.tscn")
 
@@ -15,9 +15,9 @@ func _process(delta: float) -> void:
 	$HP.text = str(Global.vita) + " HP"
 	if len(Global.lista_quest_attive) > 0:
 		var mia_quest = str(Global.lista_quest_attive[0])
-		$quest.text = "Quest: " + str(Global.mapping_nomi.get(mia_quest, "Nessuna quest"))
+		$quest.text = "Task: " + str(Global.mapping_nomi.get(mia_quest, ""))
 	else:
-		$quest.text = "Quest: "
+		$quest.text = "Task: "
 
 func update_quest():
 	

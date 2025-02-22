@@ -12,7 +12,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -20,7 +20,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	# Entrare in una stanza
 	if get_tree().current_scene.name == "corridoio":
 		Global.bob_position = body.position
-		var rand_num = randi_range(0,2)
 		update_last_room(body.position.x)
 		apri_porta.play()
 		fade_to_black()
@@ -30,7 +29,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func clock_tick(debug:bool):
-	Global.vita -=3 # to suicide
+	#Global.vita -=3 # to suicide
 	if Global.minuto == 45:
 		Global.minuto -= 45
 	else:
@@ -38,8 +37,8 @@ func clock_tick(debug:bool):
 		return
 	
 	if Global.ora >= 24:
-		Global.ora == 7
-		Global.giorno +=1
+		Global.ora = 7
+		Global.giorno += 1
 		Global.vita -= len(Global.lista_quest_attive)
 		Global.lista_quest_attive = Global.lista_quests.duplicate() #ogni giorno resetta quest
 	else:
