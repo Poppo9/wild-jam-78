@@ -31,7 +31,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func clock_tick(debug:bool):
-	#Global.vita -=3 # to suicide
+	#Global.vita -=1 # to suicide
 	if Global.minuto == 45:
 		Global.minuto -= 45
 	else:
@@ -59,6 +59,8 @@ func fade_to_black():
 	tween.tween_callback(change_scene)
 
 func change_scene():
+	if (Global.ora != 7) and (Global.minuto !=0):
+		Global.record = str(Global.giorno) + ", hour " + str(Global.ora) + str(Global.minuto)
 	var prob_random = min(0.2 * Global.giorno, 0.8)  # 20% per giorno, max 80%
 	var is_random = randf() < prob_random
 	var random_room = Global.lista_stanze[int(randi_range(0,6))]

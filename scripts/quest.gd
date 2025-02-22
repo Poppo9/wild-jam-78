@@ -4,6 +4,8 @@ extends Node2D
 @onready var parent_node: Node2D = $".."
 @onready var ding: AudioStreamPlayer = $ding
 @onready var damage_sound: AudioStreamPlayer = $damage_sound
+@onready var ronf: AudioStreamPlayer = $ronf
+@onready var background: ColorRect = $background
 
 func _ready() -> void:
 	if len(Global.lista_quest_attive) > 0:
@@ -13,6 +15,7 @@ func _ready() -> void:
 			quest.queue_free()
 	else:	
 		quest.queue_free()
+	background.visible = false
 
 
 func _process(_delta: float) -> void:
@@ -47,9 +50,15 @@ func addormentati() -> void:
 	Global.ora = 7
 	Global.minuto = 0
 	Global.vita -= len(Global.lista_quest_attive)
-	damage_sound.play()
-	while damage_sound.playing:
-		pass
+	if len(Global.lista_quest_attive) > 0:
+		damage_sound.play()
+		while damage_sound.playing:
+			pass
+	else:
+		ronf.play()
+		background.visible = true  
+		await ronf.finished  
+
 	Global.lista_quest_attive = Global.lista_quests.duplicate()
 	quest.queue_free()
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/camera_2_0.tscn")
