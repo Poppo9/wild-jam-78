@@ -41,7 +41,7 @@ shape = SubResource("RectangleShape2D_kk1hi")
 position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_3t78v")
 autoplay = "default"
-frame_progress = 0.051487
+frame_progress = 0.550831
 
 [node name="ding" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_g1euo")

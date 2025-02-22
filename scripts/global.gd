@@ -18,13 +18,13 @@ var lista_stanze = [
 ]
 
 const mapping_nomi = {
-	"camera": "go to sleep",
-	"studio": "read a book",
-	"stanza_gatto": "feed the cat",
-	"bagno": "go to the bathroom",
-	"cucina": "eat something",
-	"cantina": "check on 'Bob'",
-	"esterno": "check the mailbox"
+	"camera": "I'm so tired... go to sleep.",
+	"studio": "maybe read a book?",
+	"stanza_gatto": "you HAVE to feed Muso, NOW!",
+	"bagno": "you should use the bathroom...",
+	"cucina": "you need to eat something...",
+	"cantina": "can you check on 'Bob'?",
+	"esterno": "you should pick some folowers now..."
 }
 
 var ordine_stanze = mapping_nomi.keys()

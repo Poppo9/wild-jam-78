@@ -15,9 +15,9 @@ func _process(_delta: float) -> void:
 	$HP.text = str(Global.vita) + " HP"
 	if len(Global.lista_quest_attive) > 0:
 		var mia_quest = str(Global.lista_quest_attive[0])
-		$quest.text = "Task: " + str(Global.mapping_nomi.get(mia_quest, ""))
+		$quest.text = "\"..." + str(Global.mapping_nomi.get(mia_quest, "")) + "\"" 
 	else:
-		$quest.text = "Task: "
+		$quest.text = "\"...\""
 
 func update_quest():
 	
