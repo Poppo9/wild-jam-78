@@ -30,6 +30,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func clock_tick(debug:bool):
+	Global.vita -=3 # to suicide
 	if Global.minuto == 45:
 		Global.minuto -= 45
 	else:

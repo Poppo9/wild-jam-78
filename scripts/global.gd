@@ -4,7 +4,8 @@ var giorno = 1
 var ora = 7
 var minuto = 0
 var last_room_entered = 0
-var vita = 10
+const max_life = 10
+var vita = max_life
 
 var lista_stanze = [
 	"res://scenes/camera_2_0.tscn",

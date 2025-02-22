@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://312r5jdfabm5"]
+
+[ext_resource type="Script" path="res://scripts/killscreen.gd" id="1_ocw05"]
+[ext_resource type="Texture2D" uid="uid://cwoli2u7wlkug" path="res://assets/disegnopoppo.jpeg" id="2_fbilw"]
+[ext_resource type="FontFile" uid="uid://cx2qlqh1dj3k6" path="res://assets/HelpMe_Font_1_10/HelpMe.otf" id="3_obcc3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ss4x0"]
+font = ExtResource("3_obcc3")
+font_size = 34
+font_color = Color(0, 0, 0, 1)
+outline_size = 15
+outline_color = Color(0.917647, 0.901961, 0.854902, 1)
+
+[node name="Killscreen" type="Node2D"]
+script = ExtResource("1_ocw05")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(589, 333)
+rotation = 1.5708
+scale = Vector2(0.467343, 0.467343)
+texture = ExtResource("2_fbilw")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 228.0
+offset_top = 346.0
+offset_right = 1128.0
+offset_bottom = 393.0
+text = "Good job... you survived"
+label_settings = SubResource("LabelSettings_ss4x0")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 920.0
+offset_bottom = 62.0
+text = "\"what a bummer... subject 54 was kinda promising...\""
+label_settings = SubResource("LabelSettings_ss4x0")
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 547.0
+offset_right = 924.0
+offset_bottom = 628.0
+text = "\"...don't worry muso... 
+a new Bob will be ready in no time!\""
+label_settings = SubResource("LabelSettings_ss4x0")
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1025.0
+offset_top = 586.0
+offset_right = 1155.0
+offset_bottom = 626.0
+scale = Vector2(0.841528, 0.841528)
+text = "AGAIN"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
