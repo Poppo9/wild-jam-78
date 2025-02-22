@@ -26,6 +26,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	var lista_quest = Global.lista_quest_attive.duplicate() 
 	if body.name == "CharacterBody2D":
 		if parent_node.name in lista_quest:
+			quest.get_node("Area2D/CollisionShape2D").set_deferred("disabled", true)
+			quest.get_node("AnimatedSprite2D").visible = false
 			if parent_node.name == "camera":
 				Global.lista_quest_attive = [] #svuota quest attive
 				addormentati()# TODO non dovrebbe subire danni ma il giorno aumenta
