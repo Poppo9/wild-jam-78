@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bj45604kpjnhl"]
+[gd_scene load_steps=9 format=3 uid="uid://bj45604kpjnhl"]
 
 [ext_resource type="Script" path="res://scripts/quest.gd" id="1_hmr5i"]
 [ext_resource type="Texture2D" uid="uid://yanao8q5x3d7" path="res://assets/exclamation_spritesheet_01.png" id="2_nmru4"]
 [ext_resource type="AudioStream" uid="uid://bngud8s44krqd" path="res://audio/ding.mp3" id="3_g1euo"]
+[ext_resource type="AudioStream" uid="uid://dj5t7thups7o2" path="res://audio/damage.mp3" id="4_8jfgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kk1hi"]
 
@@ -41,11 +42,15 @@ shape = SubResource("RectangleShape2D_kk1hi")
 position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_3t78v")
 autoplay = "default"
-frame_progress = 0.966782
+frame_progress = 0.84159
 
 [node name="ding" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_g1euo")
 volume_db = -10.0
 pitch_scale = 1.71
+
+[node name="damage_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8jfgn")
+volume_db = -10.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

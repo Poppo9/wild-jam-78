@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs3hpem4hpru7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k5sj1"]
+font_size = 150
+font_color = Color(1, 1, 1, 0.741176)
+
+[node name="Credits" type="Node2D"]
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 58.0
+offset_top = 30.0
+offset_right = 2693.0
+offset_bottom = 2731.0
+scale = Vector2(0.4, 0.4)
+text = "CREDITS
+
+Authours: Poppo9 & Acronimo90
+Endscreen Art by: Marco Boccignone
+Music by: 
+
+Player Charachter by: 
+Cat and cat's room by:
+Bedroom and Corridor by:
+Study Background by:
+
+
+Fonts:"
+label_settings = SubResource("LabelSettings_k5sj1")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = -30
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.128344, 0.128344, 0.128344, 1)

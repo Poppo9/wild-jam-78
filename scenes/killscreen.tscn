@@ -51,9 +51,9 @@ label_settings = SubResource("LabelSettings_ss4x0")
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
-offset_left = 1025.0
+offset_left = 1014.0
 offset_top = 586.0
-offset_right = 1155.0
+offset_right = 1144.0
 offset_bottom = 626.0
 scale = Vector2(0.841528, 0.841528)
 text = "AGAIN"

@@ -3,6 +3,7 @@ extends Node2D
 @onready var quest: Node2D = $"."
 @onready var parent_node: Node2D = $".."
 @onready var ding: AudioStreamPlayer = $ding
+@onready var damage_sound: AudioStreamPlayer = $damage_sound
 
 func _ready() -> void:
 	if len(Global.lista_quest_attive) > 0:
@@ -27,8 +28,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 				addormentati()# TODO non dovrebbe subire danni ma il giorno aumenta
 				return
 			else:
-			#elif parent_node.name in Global.quest_lunghe:
-				Global.ora += 1
+				if parent_node.name in Global.quest_lunghe:
+					Global.ora += 1
 				ding.play()
 				#while ding.playing:
 					#pass
@@ -46,6 +47,9 @@ func addormentati() -> void:
 	Global.ora = 7
 	Global.minuto = 0
 	Global.vita -= len(Global.lista_quest_attive)
+	damage_sound.play()
+	while damage_sound.playing:
+		pass
 	Global.lista_quest_attive = Global.lista_quests.duplicate()
 	quest.queue_free()
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/camera_2_0.tscn")
