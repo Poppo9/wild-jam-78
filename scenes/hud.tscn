@@ -34,13 +34,12 @@ vertical_alignment = 1
 
 [node name="quest" type="Label" parent="."]
 texture_filter = 2
-offset_left = 299.0
+offset_left = 400.0
 offset_top = 20.0
-offset_right = 899.0
+offset_right = 554.0
 offset_bottom = 62.0
 text = "quest"
 label_settings = SubResource("LabelSettings_ipvcx")
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HP" type="Label" parent="."]
@@ -48,16 +47,6 @@ texture_filter = 2
 offset_left = 1050.0
 offset_top = 20.0
 offset_right = 1091.0
-offset_bottom = 62.0
-text = "HP"
-label_settings = SubResource("LabelSettings_ipvcx")
-vertical_alignment = 1
-
-[node name="remaining_quests" type="Label" parent="."]
-texture_filter = 2
-offset_left = 935.0
-offset_top = 20.0
-offset_right = 976.0
 offset_bottom = 62.0
 text = "HP"
 label_settings = SubResource("LabelSettings_ipvcx")
