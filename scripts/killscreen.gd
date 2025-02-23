@@ -5,7 +5,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	label.text = "\"...IT survived untill day " + Global.giorno +"...\""
+	label.text = "\"...IT survived untill day " + str(Global.giorno) +"...\""
 	morte.play()
 	await morte.finished
 
