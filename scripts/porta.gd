@@ -37,16 +37,6 @@ func clock_tick(debug:bool):
 	else:
 		Global.minuto += 15
 		return
-	
-	#if Global.ora >= 24:
-		#Global.ora = 7
-		#Global.giorno += 1
-		#Global.vita -= len(Global.lista_quest_attive)
-		#if len(Global.lista_quest_attive)>0:
-			#damage_sound.play()
-			#await damage_sound.finished
-		#Global.lista_quest_attive = Global.lista_quests.duplicate() #ogni giorno resetta quest
-	#else:
 	Global.ora += 1
 	if debug:
 		print("Ora: " + str(Global.ora))
@@ -58,12 +48,14 @@ func fade_to_black():
 	tween.tween_callback(change_scene)
 
 func change_scene():
-	#if (Global.ora != 7) and (Global.minuto !=0):
-		#Global.record = str(Global.giorno) + ", hour " + str(Global.ora-1).lpad(2,"0") + str(Global.minuto).lpad(2,"0")
 	var prob_random = min(0.2 * (Global.giorno-1), 0.8)  # 20% per giorno, max 80%
 	var is_random = randf() < prob_random
 	var random_room = Global.lista_stanze[int(randi_range(0,6))]
-	
+	if Global.ora > 23:
+		# Riproduci suoni qui se necessario
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/camera_2_0.tscn")
+		return
+
 	if get_tree().current_scene.name == "corridoio":
 		var expected_room = Global.lista_stanze[Global.last_room_entered]
 		if is_random:
