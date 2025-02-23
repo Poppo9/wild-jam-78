@@ -1,7 +1,7 @@
 extends Node
 
 var giorno = 1
-var ora = 7
+var ora = 22
 var minuto = 0
 var last_room_entered = 0
 const max_life = 10
@@ -19,13 +19,13 @@ var lista_stanze = [
 ]
 
 const mapping_nomi = {
-	"camera": "I'm so tired... go to sleep.",
-	"studio": "maybe read a book?",
-	"stanza_gatto": "you HAVE to feed Muso, NOW!",
-	"bagno": "you should use the bathroom...",
-	"cucina": "you need to eat something...",
-	"cantina": "can you check on 'Bob'?",
-	"esterno": "you should pick some folowers now..."
+	"camera": 		"I'm so tired... go to sleep.",
+	"studio": 		"maybe read a nice book?",
+	"stanza_gatto": 	"you HAVE to feed Muso, NOW!",
+	"bagno": 		"you should use the bathroom...",
+	"cucina": 		"you need to eat something...",
+	"cantina": 		"can you check on 'Bob'?",
+	"esterno": 		"you should pick some flowers..."
 }
 
 var ordine_stanze = mapping_nomi.keys()
