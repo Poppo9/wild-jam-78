@@ -1,11 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4cpuiwplvyh0"]
+[gd_scene load_steps=9 format=3 uid="uid://d4cpuiwplvyh0"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_74rfu"]
+[ext_resource type="AudioStream" uid="uid://dj5t7thups7o2" path="res://audio/damage.mp3" id="2_cag2p"]
+[ext_resource type="FontFile" uid="uid://cya4de56flkn8" path="res://assets/QuinqueFive_Font_1_15/QuinqueFive.ttf" id="2_syu8g"]
+[ext_resource type="AudioStream" uid="uid://pvhr28r2nyb6" path="res://audio/ronf.mp3" id="3_rt74r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ipvcx"]
-font_size = 30
-font_color = Color(0, 0, 0, 1)
+font = ExtResource("2_syu8g")
+font_size = 21
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wcc5v"]
+font = ExtResource("2_syu8g")
+font_size = 10
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i67v6"]
+font_size = 36
 outline_size = 6
+outline_color = Color(0, 0, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h1x8w"]
+font = ExtResource("2_syu8g")
+font_size = 21
+outline_size = 6
+outline_color = Color(1, 0, 0, 1)
 
 [node name="HUD" type="Node2D"]
 top_level = true
@@ -14,56 +35,83 @@ script = ExtResource("1_74rfu")
 
 [node name="days" type="Label" parent="."]
 texture_filter = 2
-offset_left = 40.0
+offset_left = 34.0
 offset_top = 20.0
-offset_right = 92.0
+offset_right = 110.0
 offset_bottom = 62.0
 text = "day"
 label_settings = SubResource("LabelSettings_ipvcx")
 vertical_alignment = 1
 
+[node name="TEXT" type="Label" parent="."]
+texture_filter = 2
+offset_left = 983.0
+offset_top = 22.0
+offset_right = 1059.0
+offset_bottom = 64.0
+text = "tasks
+ left"
+label_settings = SubResource("LabelSettings_wcc5v")
+vertical_alignment = 1
+
 [node name="hour" type="Label" parent="."]
 texture_filter = 2
-offset_left = 164.0
-offset_top = 20.0
-offset_right = 318.0
-offset_bottom = 62.0
+offset_left = 35.0
+offset_top = 68.0
+offset_right = 189.0
+offset_bottom = 110.0
 text = "hour"
 label_settings = SubResource("LabelSettings_ipvcx")
 vertical_alignment = 1
 
 [node name="quest" type="Label" parent="."]
 texture_filter = 2
-offset_left = 422.0
-offset_top = 20.0
-offset_right = 576.0
-offset_bottom = 62.0
-text = "quest"
-label_settings = SubResource("LabelSettings_ipvcx")
+offset_left = 236.0
+offset_top = 39.0
+offset_right = 849.0
+offset_bottom = 89.0
+text = "\"...you should pick some flowers... \""
+label_settings = SubResource("LabelSettings_i67v6")
 vertical_alignment = 1
 
 [node name="HP" type="Label" parent="."]
 texture_filter = 2
-offset_left = 1050.0
-offset_top = 20.0
-offset_right = 1091.0
-offset_bottom = 62.0
+offset_left = 994.0
+offset_top = 68.0
+offset_right = 1044.0
+offset_bottom = 110.0
 text = "HP"
 label_settings = SubResource("LabelSettings_ipvcx")
 vertical_alignment = 1
 
 [node name="remaining_quests" type="Label" parent="."]
 texture_filter = 2
-offset_left = 302.0
+offset_left = 1045.0
 offset_top = 20.0
-offset_right = 343.0
+offset_right = 1146.0
 offset_bottom = 62.0
-text = "HP"
-label_settings = SubResource("LabelSettings_ipvcx")
+text = "#d"
+label_settings = SubResource("LabelSettings_h1x8w")
+horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background1" type="ColorRect" parent="."]
 z_index = -30
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.128344, 0.128344, 0.128344, 1)
+
+[node name="damage_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cag2p")
+volume_db = -10.0
+
+[node name="ronf" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rt74r")
+volume_db = -10.0
+
+[node name="background" type="ColorRect" parent="."]
+top_level = true
+z_index = 5
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.128344, 0.128344, 0.128344, 1)

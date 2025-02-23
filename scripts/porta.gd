@@ -38,16 +38,16 @@ func clock_tick(debug:bool):
 		Global.minuto += 15
 		return
 	
-	if Global.ora >= 24:
-		Global.ora = 7
-		Global.giorno += 1
-		Global.vita -= len(Global.lista_quest_attive)
-		if len(Global.lista_quest_attive)>0:
-			damage_sound.play()
-			await damage_sound.finished
-		Global.lista_quest_attive = Global.lista_quests.duplicate() #ogni giorno resetta quest
-	else:
-		Global.ora += 1
+	#if Global.ora >= 24:
+		#Global.ora = 7
+		#Global.giorno += 1
+		#Global.vita -= len(Global.lista_quest_attive)
+		#if len(Global.lista_quest_attive)>0:
+			#damage_sound.play()
+			#await damage_sound.finished
+		#Global.lista_quest_attive = Global.lista_quests.duplicate() #ogni giorno resetta quest
+	#else:
+	Global.ora += 1
 	if debug:
 		print("Ora: " + str(Global.ora))
 		print("Giorno: " + str(Global.giorno))
@@ -58,8 +58,8 @@ func fade_to_black():
 	tween.tween_callback(change_scene)
 
 func change_scene():
-	if (Global.ora != 7) and (Global.minuto !=0):
-		Global.record = str(Global.giorno) + ", hour " + str(Global.ora-1).lpad(2,"0") + str(Global.minuto).lpad(2,"0")
+	#if (Global.ora != 7) and (Global.minuto !=0):
+		#Global.record = str(Global.giorno) + ", hour " + str(Global.ora-1).lpad(2,"0") + str(Global.minuto).lpad(2,"0")
 	var prob_random = min(0.2 * (Global.giorno-1), 0.8)  # 20% per giorno, max 80%
 	var is_random = randf() < prob_random
 	var random_room = Global.lista_stanze[int(randi_range(0,6))]
@@ -70,12 +70,15 @@ func change_scene():
 			if random_room != expected_room:
 				shuffle.play()
 				await shuffle.finished
+			clock_tick(true)
 			get_tree().call_deferred("change_scene_to_file", random_room)
 		else:
+			clock_tick(true)
 			get_tree().call_deferred("change_scene_to_file", expected_room)
 	else:
+		clock_tick(true)
 		get_tree().call_deferred("change_scene_to_file", "res://scenes/corridoio.tscn")
-	clock_tick(true)
+	#clock_tick(true)
 
 
 func update_last_room(x_body):

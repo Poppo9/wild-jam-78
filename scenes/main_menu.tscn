@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkokvykw1i5fk"]
+[gd_scene load_steps=6 format=3 uid="uid://dkokvykw1i5fk"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_4eydl"]
 [ext_resource type="Texture2D" uid="uid://dewqlqjpstqpx" path="res://assets/homescreen.png" id="2_8kuwa"]
+[ext_resource type="FontFile" uid="uid://cya4de56flkn8" path="res://assets/QuinqueFive_Font_1_15/QuinqueFive.ttf" id="3_ed74b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v3mli"]
 font_size = 100
@@ -9,7 +10,8 @@ font_color = Color(0, 0, 0, 1)
 outline_size = 6
 
 [sub_resource type="LabelSettings" id="LabelSettings_tp0hm"]
-font_size = 25
+font = ExtResource("3_ed74b")
+font_size = 20
 font_color = Color(0, 0, 0, 1)
 outline_size = 6
 
@@ -46,11 +48,11 @@ text = "                              "
 z_index = 1
 texture_filter = 2
 layout_mode = 1
-offset_left = 20.4907
-offset_top = 2.04907
-offset_right = 152.491
-offset_bottom = 44.0491
-scale = Vector2(0.703209, 0.703209)
+offset_left = 6.1472
+offset_top = 5.85448
+offset_right = 217.147
+offset_bottom = 47.8545
+scale = Vector2(0.562702, 0.562702)
 text = "New Game"
 label_settings = SubResource("LabelSettings_tp0hm")
 horizontal_alignment = 1
@@ -69,12 +71,12 @@ text = "                      "
 z_index = 1
 texture_filter = 2
 layout_mode = 1
-offset_left = -5.26907
-offset_top = 2.04906
-offset_right = 152.731
-offset_bottom = 44.0491
-scale = Vector2(0.703209, 0.703209)
-text = "Tutorial"
+offset_left = -2.3418
+offset_top = 9.07443
+offset_right = 237.658
+offset_bottom = 51.0745
+scale = Vector2(0.433903, 0.433903)
+text = "tutorial"
 label_settings = SubResource("LabelSettings_tp0hm")
 horizontal_alignment = 1
 vertical_alignment = 1

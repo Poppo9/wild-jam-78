@@ -21,7 +21,7 @@ var lista_stanze = [
 const mapping_nomi = {
 	"camera": 		"I'm so tired... go to sleep.",
 	"studio": 		"maybe read a nice book?",
-	"stanza_gatto": 	"you HAVE to feed Muso, NOW!",
+	"stanza_gatto": "you HAVE to feed Muso, NOW!",
 	"bagno": 		"you should use the bathroom...",
 	"cucina": 		"you need to eat something...",
 	"cantina": 		"can you check on 'Bob'?",

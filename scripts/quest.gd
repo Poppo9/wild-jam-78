@@ -37,9 +37,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 					Global.ora += 1
 				ding.play()
 				await ding.finished
-				if Global.ora > 24:
-					addormentati()
-					return
+				#if Global.ora > 24:
+					#addormentati()
+					#return
 			quest.get_node("Area2D/CollisionShape2D").queue_free()
 			quest.get_node("AnimatedSprite2D").queue_free()
 			completa_quest(parent_node.name,lista_quest)
